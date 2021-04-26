@@ -915,6 +915,9 @@ section {
 	text-decoration: none;
 }
 
+
+
+/*Мобильная версия первой страницы*/
 @media (max-width: 500px) {
 	.main-page-section-1 {
 		display: none;
@@ -947,22 +950,25 @@ section {
 		justify-content: center;
 	}
 	.mobile-main-page-graphic {
-		padding-bottom: 161.066666667%;
-		width: 31.2%;
+		padding-bottom: 145%;
+		width: 43%;
 	}
 	.mobile-main-page-graphic img {
-		object-fit: cover;
+		object-fit: contain;
 		max-width: 100%;
 	}
 	.mobile-main-page-header {
-
+	margin-left: -27%;
 	}
 	.mobile-main-page-header p {
 	font-family: De Valencia;
 	font-size: 6.8em;
 	color: #fff;
-	margin-top: 0%;
+	margin: 0 0 3.73333333333% 0;
 	text-align: right;
+	}
+	.mobile-header-3 {
+		font-size: 6.4em;
 	}
 }
 
