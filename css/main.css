@@ -943,8 +943,8 @@ section {
 		justify-content: center;
 	}
 	.mobile-main-page-graphic {
-		width: 42.7397260274%;
-		padding-top: 220.639269406%;
+		max-width: 42.7397260274%;
+		max-padding-top: 220.639269406%;
 	}
 	.mobile-main-page-header {
 
