@@ -649,7 +649,7 @@ section {
 }
 
 .about-text p {
-	background: rgb(255, 255, 255, 0.5);
+	background: rgb(255, 255, 255, 0.3);
 /*	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);*/
 	font-size: calc(24px + 4 * ((100vw - 320px) / (1920 - 320)));
