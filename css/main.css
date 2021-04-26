@@ -649,8 +649,9 @@ section {
 }
 
 .about-text p {
-	background: #fff;
-font-size: calc(24px + 4 * ((100vw - 320px) / (1920 - 320)));
+	background: rgb(255, 255, 255, 0.5);
+	backdrop-filter: blur(2px);
+	font-size: calc(24px + 4 * ((100vw - 320px) / (1920 - 320)));
 }
 
 .about-contacts-link {
