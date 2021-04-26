@@ -135,9 +135,9 @@ section {
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 	body {
-		font-size: 2px;
+		font-size: 6px;
 	}
 }
 
@@ -947,7 +947,7 @@ section {
 		justify-content: center;
 	}
 	.mobile-main-page-graphic {
-		padding-top: 161.066666667%;
+		padding-bottom: 161.066666667%;
 		width: 31.2%;
 	}
 	.mobile-main-page-graphic img {
