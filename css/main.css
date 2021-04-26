@@ -1650,7 +1650,7 @@ footer a {
 
 
 /*Мобильная версия первой страницы*/
-@media screen and (max-width: 500px) {
+@media (min-width: 100px) and (max-width: 500px) {
 	.main-page-section-1 {
 		display: none;
 	}
