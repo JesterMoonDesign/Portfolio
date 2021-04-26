@@ -1687,12 +1687,13 @@ footer a {
 		display: none;
 	}
 	.mobile-main-page-nav {
-		max-width: 80%;
+		width: 80%;
+		max-height: 15%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		padding: 5px 30px 0 30px;
+		padding: 10px 30px 0 30px;
 	}
 	.mobile-main-page-nav img:nth-child(1) {
 		width: 18.6666666667%;
