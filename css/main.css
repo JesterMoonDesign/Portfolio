@@ -1684,7 +1684,7 @@ footer a {
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		padding: 30px 30px 0 30px;
+		padding: 10px 30px 0 30px;
 	}
 	.mobile-main-page-nav img:nth-child(1) {
 		width: 18.6666666667%;
@@ -1696,7 +1696,7 @@ footer a {
 		display: block;
 		text-align: center;
 		background: #000;
-		padding-bottom: 4%
+		padding-bottom: 8%
 	}
 	.mobile-main-page {
 		margin: 0 auto;
@@ -1710,14 +1710,14 @@ footer a {
 		position: relative;
 		z-index: 2;
 		width: 43%;
-		padding-top: 190%;
+		padding-top: 200%;
 	}
 	.mobile-main-page-graphic img {
 		position: absolute;
 		top: 0;
 		left: 0;
 		object-fit: cover;
-		width: 80%;
+		width: 86%;
 	}
 	.mobile-main-page-header {
 		margin-top: 2%;
@@ -1734,6 +1734,7 @@ footer a {
 		font-size: 6.4em;
 	}
 	.mobile-let-me-show-you {
+		margin-top: -2%;
 		text-align: center;
 		font-family: De Valencia;
 		font-size: 3.5em;
