@@ -1667,7 +1667,11 @@ footer a {
 	color: #fff;
 }
 
-
+@media screen and (max-width: 500px) {
+	.footer-sign p {
+	font-size: 2em;
+	}
+}
 
 
 
