@@ -915,64 +915,6 @@ section {
 	text-decoration: none;
 }
 
-
-
-/*Мобильная версия первой страницы*/
-@media (max-width: 500px) {
-	.main-page-section-1 {
-		display: none;
-	}
-	.nav {
-		display: none;
-	}
-	.mobile-main-page-nav {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		padding: 30px 30px 0 30px;
-	}
-	.mobile-main-page-nav img:nth-child(1) {
-		width: 18.6666666667%;
-	}
-	.mobile-main-page-nav img:nth-child(2) {
-		width: 10.6666666667%;
-	}
-	.mobile-main-page-section-1 {
-		display: block;
-	}
-	.mobile-main-page {
-		margin: 0% auto;
-		padding-top: 7%;
-		width: 72%;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-	.mobile-main-page-graphic {
-		padding-bottom: 145%;
-		width: 43%;
-	}
-	.mobile-main-page-graphic img {
-		object-fit: contain;
-		max-width: 100%;
-	}
-	.mobile-main-page-header {
-	margin-left: -27%;
-	}
-	.mobile-main-page-header p {
-	font-family: De Valencia;
-	font-size: 6.8em;
-	color: #fff;
-	margin: 0 0 3.73333333333% 0;
-	text-align: right;
-	}
-	.mobile-header-3 {
-		font-size: 6.4em;
-	}
-}
-
-
 .page-2-content {
 	width: 90%;
 	padding-bottom: 20px;
@@ -1704,6 +1646,63 @@ footer a {
 }
 
 
+
+
+
+/*Мобильная версия первой страницы*/
+@media screen and (max-width: 500px) {
+	.main-page-section-1 {
+		display: none;
+	}
+	.nav {
+		display: none;
+	}
+	.mobile-main-page-nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding: 30px 30px 0 30px;
+	}
+	.mobile-main-page-nav img:nth-child(1) {
+		width: 18.6666666667%;
+	}
+	.mobile-main-page-nav img:nth-child(2) {
+		width: 10.6666666667%;
+	}
+	.mobile-main-page-section-1 {
+		display: block;
+	}
+	.mobile-main-page {
+		margin: 0% auto;
+		padding-top: 7%;
+		width: 72%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.mobile-main-page-graphic {
+		padding-bottom: 145%;
+		width: 43%;
+	}
+	.mobile-main-page-graphic img {
+		object-fit: contain;
+		max-width: 100%;
+	}
+	.mobile-main-page-header {
+	margin-left: -27%;
+	}
+	.mobile-main-page-header p {
+	font-family: De Valencia;
+	font-size: 6.8em;
+	color: #fff;
+	margin: 0 0 3.73333333333% 0;
+	text-align: right;
+	}
+	.mobile-header-3 {
+		font-size: 6.4em;
+	}
+}
 
 
 
