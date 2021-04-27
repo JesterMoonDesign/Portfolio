@@ -1697,20 +1697,25 @@ footer a {
 		display: none;
 	}
 	.mobile-main-page-nav {
-		margin-top: 10px;
+		margin-top: 4%;
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 	}
-	.mobile-main-page-nav img:nth-child(1) {
+	.mobile-logo {
 		margin: 0 0 0 20px;
-		width: 14.6666666667%;
+		width: 18%;
 	}
-	.mobile-main-page-nav img:nth-child(2) {
+	.burger {
+		display: block;
 		margin: 0 20px 0 0;
-		width: 6.6666666667%;
+		width: 10%;
+	}
+	.burger img {
+		padding: 20% 20% 20% 20%;
+		width: 100%;
 	}
 	.mobile-main-page-section-1 {
 		display: block;
@@ -1719,9 +1724,9 @@ footer a {
 		padding-bottom: 15%
 	}
 	.mobile-main-page {
-		margin: 0 auto;
+		margin: 4% auto 0 auto;
 		padding-top: 1%;
-		width: 72%;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -1729,8 +1734,8 @@ footer a {
 	.mobile-main-page-graphic {
 		position: relative;
 		z-index: 2;
-		width: 43%;
-		padding-top: 200%;
+		width: 35%;
+		padding-top: 165%;
 	}
 	.mobile-main-page-graphic img {
 		position: absolute;
