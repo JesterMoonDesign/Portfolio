@@ -1705,6 +1705,7 @@ footer a {
 		justify-content: space-between;
 	}
 	.mobile-logo {
+		display: block;
 		margin: 0 0 0 20px;
 		width: 18%;
 	}
