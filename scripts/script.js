@@ -31,3 +31,11 @@ if (isMobile.any()) {
 } else {
 	document.body.classList.add('_pc');
 }
+
+const menuBurger = document.querySelector('.burger-list');
+
+const burger = document.querySelector('.burger');
+
+burger.addEventListener('click', () => {
+	menuBurger.classList.toggle('active');
+});
