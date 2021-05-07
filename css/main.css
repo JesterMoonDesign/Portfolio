@@ -1582,7 +1582,7 @@ font-size: 9em;
 }
 @media (max-width: 500px) {
 	.contacts-wraper {
-		transform: translate(0, 40vw);
+		transform: translate(0, 45vw);
 	}
 }
 
