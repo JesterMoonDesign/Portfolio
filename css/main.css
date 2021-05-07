@@ -1572,6 +1572,7 @@ font-size: 9em;
 	z-index: 50;
 	transform: translate(0, 30vw);
 	transition: all 0.1s ease-in-out 0s;
+	-webkit-transition: all 0.1s ease-in-out 0s;
 }
 
 @media (max-width: 1425px) {
@@ -1749,6 +1750,7 @@ font-size: 9em;
 	align-items: center;
 	text-align: center;
 	transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
 }
 
 .email p {
@@ -1812,6 +1814,7 @@ font-size: 9em;
 .social-media img {
 	max-width: 100%;
 }
+
 
 @media (max-width: 500px) {
 	.contacts-elipses {
@@ -2054,6 +2057,7 @@ footer a {
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
 		transition: all 0.4s ease 0s;
+		-webkit-transition: all 0.4s ease 0s;
 		transform: translate(0px, -100vh);
 	}
 
