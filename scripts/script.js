@@ -110,3 +110,12 @@ dots.forEach ((item, indexDot) => {
 
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
+
+
+
+const contactsBtn = document.querySelector('.contacts-btn');
+let contactsPage =  document.querySelector('.contacts-wraper');
+
+contactsBtn.addEventListener('click', () => {
+	contactsPage.classList.toggle('active');
+});
