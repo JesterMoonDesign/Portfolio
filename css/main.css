@@ -1554,10 +1554,15 @@ font-size: 9em;
 	z-index: -2;
 }
 
-.test {
+.contacts-rel {
 	position: relative;
 	margin-top: 15%;
 	overflow: visible;
+}
+@media (max-width: 500px) {
+	.contacts-rel {
+		margin-top: 17%;
+	}
 }
 
 
@@ -1582,7 +1587,7 @@ font-size: 9em;
 }
 @media (max-width: 500px) {
 	.contacts-wraper {
-		transform: translate(0, 70vw);
+		transform: translate(0, 37vw);
 	}
 }
 
