@@ -1778,10 +1778,6 @@ font-size: 9em;
 	justify-content: center;
 }
 
-.social-media img {
-	max-width: 100%;
-}
-
 .sm-facebook {
 	width: 4.58333333333%;
 	margin: 7.60416666667% 1.5625% 0 1.5625%;
@@ -1811,6 +1807,10 @@ font-size: 9em;
 	align-items: center;
 	margin-bottom: 5%;
 	}
+}
+
+.social-media img {
+	max-width: 100%;
 }
 
 @media (max-width: 500px) {
