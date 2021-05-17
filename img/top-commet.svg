@@ -1,0 +1,37 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.14 80.32">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        fill: url(#Новый_образец_градиентной_зал_3);
+      }
+
+      .cls-2 {
+        fill: url(#Новый_образец_градиентной_зал_3-3);
+      }
+
+      .cls-3 {
+        fill: url(#Новый_образец_градиентной_зал_3-4);
+      }
+    </style>
+    <linearGradient id="Новый_образец_градиентной_зал_3" data-name="Новый образец градиентной зал 3" x1="390.02" y1="63.13" x2="191.69" y2="35.46" gradientTransform="matrix(1, 0, 0, -1, 0, 100.6)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00e6e9"/>
+      <stop offset="0.16" stop-color="#38c1f3"/>
+      <stop offset="0.36" stop-color="#7f92ff"/>
+      <stop offset="0.55" stop-color="#f894ff"/>
+      <stop offset="0.84" stop-color="#ffb894"/>
+      <stop offset="1" stop-color="#e9bd00"/>
+    </linearGradient>
+    <linearGradient id="Новый_образец_градиентной_зал_3-3" x1="390.22" y1="62.73" x2="193.75" y2="35.32" xlink:href="#Новый_образец_градиентной_зал_3"/>
+    <linearGradient id="Новый_образец_градиентной_зал_3-4" x1="389.21" y1="69.02" x2="193.72" y2="41.75" xlink:href="#Новый_образец_градиентной_зал_3"/>
+  </defs>
+  <title>page-3Монтажная область 2</title>
+  <path class="cls-1" d="M39.1,70.1h332a30,30,0,1,0-27.68-18.41L348,49.76A25,25,0,1,1,371.1,65.1H27.1Z"/>
+  <path class="cls-1" d="M69.1,65.1h302a25,25,0,1,0-19-8.73l3.79-3.25a20,20,0,1,1,15.19,7H70.1Z"/>
+  <path class="cls-2" d="M370.6,75.6H12.9L4.1,70.1h367a30,30,0,1,0-25.73-14.57L340.2,58h0A35,35,0,1,1,370.6,75.6Z"/>
+  <path class="cls-3" d="M371.1,60.1H25.46l7.28-5H371.1a15,15,0,1,0-12.86-7.28L354,50.4a20,20,0,1,1,17.15,9.7Z"/>
+</svg>

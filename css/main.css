@@ -63,6 +63,7 @@ ul, li {
 	padding: 0 0px;
 	margin: 0 auto;
 	background: #fff;
+	overflow: hidden;
 }
 
 .container.main {
@@ -670,7 +671,7 @@ section {
 .about-contacts-link {
 	display: block;
 	text-align: center;
-	margin: 6% auto;
+	margin: 3% auto 0 auto;
 	padding-bottom: 50px;
 	color: rgba(0, 0, 0, 0.5);
 	font-family: De Valencia;
@@ -914,22 +915,24 @@ section {
 
 .top-commet {
 	margin: 0 auto;
-	margin-top: -1%;
+	margin-top: -12%;
 	max-width: 100%;
+	transform: rotate(-4.1deg);
 }
 
 .main-graphic h2 {
 	color: #fff;
 	margin-left: 44.9275362319%;
-	margin-top: -9%;
+	margin-top: 0%;
 	transform: rotate(-9.65deg);
 /*	font-size: calc(60px + 50 * ((100vw - 320px) / (1920 - 320)));*/
 }
 
 .bottom-commet {
-	margin-top: -1%;
+	margin-top: -3%;
 	margin-left: 31.1594202899%;
 	max-width: 52.1739130435%;
+	transform: rotate(-9.65deg)
 }
 
 .let-me-show-you {
@@ -1102,7 +1105,7 @@ section {
 }
 
 .page_3_arrow {
-	max-width: 100%;
+	max-width: 40%;
 	margin-top: 0;
 }
 
@@ -1283,17 +1286,17 @@ section {
 	width: 100%;
 }
 
-.graphics-between-4-5-pages img:nth-child(1) {
-	max-width: 40.5026041667%;
-	margin-left: -5px;
+.left-illustration {
+	width: 70%;
+	margin-left: -25%;
 	position: absolute;
 }
 
-.graphics-between-4-5-pages img:nth-child(2) {
+.right-illustration {
 	position: absolute;
-	margin-left: 61.4583333333%;
-	margin-top: 6.25%;
-	max-width: 32.7036458333%;
+	margin-left: 58%;
+	margin-top: 8%;
+	width: 40%;
 }
 
 .main-page-section-5 {
@@ -1310,6 +1313,7 @@ section {
 }
 
 .page-5-content h2 {
+	margin-top: 5%;
 text-align: center;
 font-size: 9em;
 }
@@ -1332,32 +1336,113 @@ font-size: 9em;
 	color: #000000;
 }
 
-.before-after-prewiev {
+.before-after {
 	position: relative;
 	margin: 1% auto;
 	background: gray;
 	width: 50%;
-	padding-top: 28.125%;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
-	.before-after-prewiev {
+	.before-after {
 	width: 80%;
-	padding-top: 45%;
 	}
 }
 
-.before-after-prewiev img {
+
+.slider-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.wrap,
+.gallery,
+.img {
+	width: 100%;
+	height: 28%;
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	width: 100%;
+	height: 35%;
+	position: relative;
+}
+
+.gallery {
+	position: relative;
+	display: flex;
+	z-index: 1;
+}
+
+.img {
+	display: block;
+	cursor: pointer;
 	object-fit: cover;
+	object-position: left center;
+}
+
+.gallery_resize,
+.gallery_resize::after {
+position: absolute;
+top: 0;
+cursor: pointer;
+}
+
+.gallery_resize {
+	left: 0;
+	width: 50%;
+	overflow: hidden;
+}
+
+.tr {
+	transition: 0.3s;
+}
+
+.gallery_resize {
+	content: '';
+	width: 0%;
+	background-color: #fff;
+	box-sizing: border-box;
 	position: absolute;
+	right: 0;
+	height: 100%;
+	z-index: 20;
+	transition:0.01s;
+}
+
+.gallery_resize img {
+	width: 100%;
+	height: 100%;
+}
+
+.slider_switch {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 50;
 	left: 0;
 	top: 0;
-	width: 100%;
+	bottom: 0;
+	transition:0.01s;
 }
+
+.slider_switch_img {
+	width: 40px;
+	height: 100%;
+	object-fit: none;
+	object-position: center;
+	margin-left: 50%;
+	cursor: pointer;
+}
+
 
 .main-page-section-6 {
 	background: #fff;
-	padding-top: 13.5416666667%;
+	padding-top: 2%;
 	width: 100%;
 	position: relative;
 }
@@ -1504,9 +1589,11 @@ font-size: 9em;
 }
 
 .contacts-offer {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .page-7-h2 {
@@ -1516,6 +1603,11 @@ font-size: 9em;
 	max-width: 80%;
 	color: #FFF;
 }
+
+.to-contacts-arrow {
+	max-width: 230px;
+}
+
 
 @media screen and (max-width: 769px) {
 	.page-7-content h2 {
@@ -1541,7 +1633,17 @@ font-size: 9em;
 	margin-top: 1.3%;
 	}
 	.to-contacts-arrow {
+		margin-left: -3%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.to-contacts-arrow {
 		margin-left: -5%;
+	}
+}@media screen and (max-width: 450px) {
+	.to-contacts-arrow {
+		margin-left: -8%;
 	}
 }
 
@@ -1698,6 +1800,10 @@ font-size: 9em;
 
 .contacts-btn {
 	width: 5%;
+}
+
+.contacts-btn:hover {
+	cursor: pointer;;
 }
 
 .mail-link img:nth-child(1) {
@@ -2127,11 +2233,12 @@ footer a {
 	}
 
 	.mobile-main-page-graphic img {
+		transform: rotate(90deg);
+		width: 450%;
 		position: absolute;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-		width: 86%;
+		object-fit: contain;
+		top: 38%;
+		left: -170%;
 	}
 
 	.mobile-main-page-header {
@@ -2141,21 +2248,21 @@ footer a {
 
 	.mobile-main-page-header p {
 	font-family: De Valencia;
-	font-size: 6.8em;
+	font-size: 16vw;
 	color: #fff;
 	margin: 0 0 3.73333333333% 0;
 	text-align: right;
 	}
 
 	.mobile-header-3 {
-		font-size: 6.4em;
+		font-size: 16vw;
 	}
 
 	.mobile-let-me-show-you {
 		margin-top: -2%;
 		text-align: center;
 		font-family: De Valencia;
-		font-size: 3.5em;
+		font-size: 6.5vw;
 		text-decoration: none;
 	}
 }

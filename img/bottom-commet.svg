@@ -1,0 +1,41 @@
+<svg id="Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.14 80.32">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        fill: url(#Безымянный_градиент_12);
+      }
+
+      .cls-2 {
+        fill: url(#Безымянный_градиент_12-2);
+      }
+
+      .cls-3 {
+        fill: url(#Безымянный_градиент_12-3);
+      }
+
+      .cls-4 {
+        fill: url(#Безымянный_градиент_12-4);
+      }
+    </style>
+    <linearGradient id="Безымянный_градиент_12" data-name="Безымянный градиент 12" x1="53.92" y1="68.74" x2="265.26" y2="22.08" gradientTransform="translate(393.39 80.32) rotate(180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7f47dd"/>
+      <stop offset="0.27" stop-color="#816aff"/>
+      <stop offset="0.52" stop-color="#c5ffbf"/>
+      <stop offset="0.75" stop-color="#efa"/>
+      <stop offset="1" stop-color="#fbae17"/>
+    </linearGradient>
+    <linearGradient id="Безымянный_градиент_12-2" x1="54.73" y1="72.4" x2="266.06" y2="25.73" xlink:href="#Безымянный_градиент_12"/>
+    <linearGradient id="Безымянный_градиент_12-3" x1="54.69" y1="72.21" x2="266.02" y2="25.55" xlink:href="#Безымянный_градиент_12"/>
+    <linearGradient id="Безымянный_градиент_12-4" x1="53.95" y1="68.88" x2="265.29" y2="22.22" xlink:href="#Безымянный_градиент_12"/>
+  </defs>
+  <title>page-3Монтажная область 2</title>
+  <path class="cls-1" d="M371.57,69.66H56.32A30,30,0,1,1,84,51.25l-4.61-1.93A25,25,0,1,0,56.32,64.66H365.19Z"/>
+  <path class="cls-2" d="M336.32,64.66h-280a25,25,0,1,1,19-8.73l-3.8-3.25a20,20,0,1,0-15.18,7H339.49Z"/>
+  <path class="cls-3" d="M56.82,75.16H334.15l5.34-5.5H56.32A30,30,0,1,1,82.05,55.09l5.17,2.42h0a35,35,0,1,0-30.4,17.64Z"/>
+  <path class="cls-4" d="M56.32,59.66H369.15l-3.33-5H56.32a15,15,0,1,1,12.86-7.28L73.47,50a20,20,0,1,0-17.15,9.71Z"/>
+</svg>
