@@ -136,6 +136,8 @@ function sliderBeeforeAfterPC () {
 
 	sliderSwitchImg.onpointerdown = function (event) {
 
+		event.preventDefault();
+
 		function onDrag(event) {
 		sliderSwitchImg.style.marginLeft = event.layerX + 'px';
 		galleryResizeWidth();
@@ -158,10 +160,6 @@ function sliderBeeforeAfterPC () {
 		}
 		galleryResizeWidth();
 	};
-
-		sliderSwitchImg.ondragstart = function() {
-		return false;
-		};
 };
 
 sliderBeeforeAfterPC()
