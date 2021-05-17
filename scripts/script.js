@@ -134,25 +134,25 @@ galleryResizeWidth()
 // Для пк:
 function sliderBeeforeAfterPC () {
 
-	sliderSwitchImg.onmousedown = function (event) {
+	sliderSwitchImg.onpointerdown = function (event) {
 
 		function onDrag(event) {
 		sliderSwitchImg.style.marginLeft = event.layerX + 'px';
 		galleryResizeWidth();
 		};
 
-		sliderSwitch.addEventListener('mousemove', onDrag);
+		sliderSwitch.addEventListener('pointermove', onDrag);
 
-		sliderSwitch.onmouseleave = function () {
-		sliderSwitch.removeEventListener('mousemove', onDrag);
+		sliderSwitch.onpointerleave = function () {
+		sliderSwitch.removeEventListener('pointermove', onDrag);
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		sliderSwitchImg.classList.add('tr');
 		galleryResize.classList.add('tr');
 		galleryResizeWidth();
 		}
 
-		sliderSwitch.onmouseup = function () {
-		sliderSwitch.removeEventListener('mousemove', onDrag);
+		sliderSwitch.onpointerup = function () {
+		sliderSwitch.removeEventListener('pointermove', onDrag);
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		}
