@@ -135,7 +135,7 @@ galleryResizeWidth()
 function sliderBeeforeAfterPC () {
 
 	sliderSwitchImg.onpointerdown = function (event) {
-
+		
 		event.preventDefault();
 
 		function onDrag(event) {
