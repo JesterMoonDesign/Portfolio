@@ -143,33 +143,26 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 		};
 
-		sliderSwitch.addEventListener('pointermove', onDrag);
+		document.body.addEventListener('pointermove', onDrag);
 
-		sliderSwitch.onpointerleave = function () {
-		sliderSwitch.removeEventListener('pointermove', onDrag);
-		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
-		sliderSwitchImg.classList.add('tr');
-		galleryResize.classList.add('tr');
-		galleryResizeWidth();
-		}
-
-		sliderSwitch.onpointerup = function () {
-		sliderSwitch.removeEventListener('pointermove', onDrag);
+		function pointerLose() {
+		document.body.removeEventListener('pointermove', onDrag);
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		}
 
-		sliderSwitch.onpointercancel = function () {
-		sliderSwitch.removeEventListener('pointermove', onDrag);
-		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
-		galleryResizeWidth();
-		}
+		document.body.addEventListener('pointerup', pointerLose);
+
+		document.body.addEventListener('pointercancel', pointerLose);
+
+		sliderSwitch.addEventListener('pointerleave', pointerLose);
+
 		galleryResizeWidth();
 	};
 };
 
 sliderBeeforeAfterPC()
-
+ 
 // // Для смартфона:
 // function sliderBeeforeAfterMobile () {
 
