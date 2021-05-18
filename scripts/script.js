@@ -32,12 +32,31 @@ if (isMobile.any()) {
 	document.body.classList.add('_pc');
 }
 
+
+
+function scrollLoc() {
+	document.body.classList.add('no_croll');
+	
+}
+
+
+function scrollUnlock() {
+	document.body.classList.remove('no_croll');
+}
+
+							// МЕНЮ БУРГЕР								
+
+
 const menuBurger = document.querySelector('.burger-list'),
 		burger = document.querySelector('.burger');
 
 burger.addEventListener('click', () => {
 	menuBurger.classList.toggle('active');
 });
+
+
+
+									 // СЛАЙДЕР 							
 
 const prev = document.getElementById('btn-prev'),
 		next = document.getElementById('btn-next'),
@@ -115,7 +134,7 @@ contactsBtn.addEventListener('click', () => {
 });
 
 
-
+					// СЛАДЙЕР BEEFORE/AFTER									
 
 
 const gallery = document.querySelector('.gallery'),
@@ -138,6 +157,8 @@ function sliderBeeforeAfterPC () {
 		
 		event.preventDefault();
 
+		scrollLoc();
+
 		function onDrag(event) {
 		sliderSwitchImg.style.marginLeft = event.layerX + 'px';
 		galleryResizeWidth();
@@ -149,6 +170,7 @@ function sliderBeeforeAfterPC () {
 		document.body.removeEventListener('pointermove', onDrag);
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
+		scrollUnlock();
 		}
 
 		document.body.addEventListener('pointerup', pointerLose);
