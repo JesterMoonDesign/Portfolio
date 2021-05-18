@@ -158,24 +158,34 @@ function sliderBeeforeAfterPC () {
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		}
+
+		sliderSwitch.onpointercancel = function () {
+		sliderSwitch.removeEventListener('pointermove', onDrag);
+		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
+		galleryResizeWidth();
+		}
 		galleryResizeWidth();
 	};
 };
 
 sliderBeeforeAfterPC()
-//Для смартфона:
+
+// // Для смартфона:
 // function sliderBeeforeAfterMobile () {
 
 // 	sliderSwitchImg.addEventListener('touchstart', sliderWork, {passive: true});
 
-// 		function sliderWork (event) {
+// 	function sliderWork (event) {
+
+// 		sliderSwitch.addEventListener('touchmove', onDrag, {passive: true});
 
 // 		function onDrag(event) {
 // 		sliderSwitchImg.style.marginLeft = event.touches[0].pageX - event.touches[0].target.offsetLeft + 'px';
+// 		console.log('1_' + event.touches[0].pageX);
+// 		console.log('2_' + event.touches[0].target.offsetLeft);
+// 		console.log(event.touches[0].pageX - event.touches[0].target.offsetLeft);
 // 		galleryResizeWidth();
 // 		};
-
-// 		sliderSwitch.addEventListener('touchmove', onDrag, {passive: true});
 
 // 		sliderSwitch.addEventListener('touchend', touchEnd, {passive: true});
 
@@ -194,5 +204,5 @@ sliderBeeforeAfterPC()
 // if (isMobile.any()) {
 // 	sliderBeeforeAfterMobile ();
 // } else {
-// 	sliderBeeforeAfterPC ();
+// 	sliderBeeforeAfterMobile ();
 // }
