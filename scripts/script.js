@@ -185,16 +185,11 @@ function sliderBeeforeAfterMobile () {
 
 	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
 
-	function pointerEventsDisabler () {
-		sliderSwitchImg.style.pointerEvents = "none";
-	}
-
-	pointerEventsDisabler();
-
 	function sliderWork () {
 
 		function onDrag(event) {
 		event.preventDefault();
+		sliderSwitchImg.style.pointerEvents = "none";
 		sliderSwitchImg.style.marginLeft = event.touches[0].pageX - event.touches[0].target.offsetLeft + 'px';
 		galleryResizeWidth();
 		};
@@ -208,11 +203,7 @@ function sliderBeeforeAfterMobile () {
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		scrollUnlock();
-		}
-
-		// sliderSwitch.addEventListener('touchcup', pointerLose, {passive: true});
-
-		// sliderSwitch.addEventListener('touchcancel', pointerLose, {passive: true});
+		};
 
 		document.body.addEventListener('touchend', pointerLose, );
 
