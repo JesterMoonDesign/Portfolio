@@ -185,8 +185,6 @@ function sliderBeeforeAfterMobile () {
 
 	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
 
-	event.preventDefault();
-
 	function pointerEventsDisabler () {
 		sliderSwitchImg.style.pointerEvents = "none";
 	}
@@ -196,6 +194,7 @@ function sliderBeeforeAfterMobile () {
 	function sliderWork () {
 
 		function onDrag(event) {
+		event.preventDefault();
 		sliderSwitchImg.style.marginLeft = event.touches[0].pageX - event.touches[0].target.offsetLeft + 'px';
 		galleryResizeWidth();
 		};
