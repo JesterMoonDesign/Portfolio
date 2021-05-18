@@ -189,7 +189,6 @@ galleryResizeWidth()
 // 	console.log(event)
 // }
 
-sliderSwitchImg.addEventListener('touchstart', sliderBeeforeAfterPC, {passive: true});
 
 function sliderBeeforeAfterPC () {
 
@@ -215,6 +214,7 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 };
 
+sliderBeeforeAfterPC();
 
 
 // // Для смартфона:
