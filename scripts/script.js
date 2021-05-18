@@ -185,6 +185,8 @@ function sliderBeeforeAfterMobile () {
 
 	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
 
+	event.preventDefault();
+
 	function pointerEventsDisabler () {
 		sliderSwitchImg.style.pointerEvents = "none";
 	}
