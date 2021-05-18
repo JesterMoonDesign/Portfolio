@@ -197,24 +197,24 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 		};
 
-		sliderSwitch.addEventListener('touchmove', onDrag, {passive: true});
+		document.body.addEventListener('touchmove', onDrag, {passive: true});
 
 		function pointerLose() {
-		sliderSwitch.removeEventListener('touchmove', onDrag, {passive: true});
+		document.body.removeEventListener('touchmove', onDrag, );
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		}
 
-		sliderSwitch.addEventListener('touchcup', pointerLose, {passive: true});
+		// sliderSwitch.addEventListener('touchcup', pointerLose, {passive: true});
 
-		sliderSwitch.addEventListener('touchcancel', pointerLose, {passive: true});
+		// sliderSwitch.addEventListener('touchcancel', pointerLose, {passive: true});
 
-		sliderSwitch.addEventListener('toucend', pointerLose, {passive: true});
+		document.body.addEventListener('touchend', pointerLose, );
 
 		galleryResizeWidth();
 };
 
-sliderBeeforeAfterPC();
+sliderSwitch.addEventListener('touchstart', sliderBeeforeAfterPC, {passive: true});
 
 
 // // Для смартфона:
