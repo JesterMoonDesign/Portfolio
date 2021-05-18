@@ -206,6 +206,8 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 		}
 
+		document.body.addEventListener('touchcup', pointerLose, {passive: true});
+
 		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
 
 		sliderSwitch.addEventListener('toucend', pointerLose, {passive: true});
