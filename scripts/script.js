@@ -207,8 +207,6 @@ function sliderBeeforeAfterMobile () {
 
 		document.body.addEventListener('touchend', pointerLose, );
 
-		document.body.addEventListener('touchcancel', () => console.log('андроид хуйня') );
-
 		galleryResizeWidth();
 	};
 };
