@@ -36,7 +36,6 @@ if (isMobile.any()) {
 
 function scrollLoc() {
 	document.body.classList.add('no_croll');
-	
 }
 
 
@@ -151,40 +150,71 @@ function galleryResizeWidth() {
 galleryResizeWidth()
 
 // Для пк:
+// function sliderBeeforeAfterPC () {
+
+// 	sliderSwitchImg.onpointerdown = function (event) {
+		
+// 		event.preventDefault();
+
+// 		scrollLoc();
+
+// 		function onDrag(event) {
+// 		sliderSwitchImg.style.marginLeft = event.layerX + 'px';
+// 		galleryResizeWidth();
+// 		};
+
+// 		document.body.addEventListener('pointermove', onDrag);
+
+// 		function pointerLose() {
+// 		document.body.removeEventListener('pointermove', onDrag);
+// 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
+// 		galleryResizeWidth();
+// 		scrollUnlock();
+// 		}
+
+// 		document.body.addEventListener('pointerup', pointerLose);
+
+// 		document.body.addEventListener('pointercancel', pointerLose);
+
+// 		sliderSwitch.addEventListener('pointerleave', pointerLose);
+
+// 		galleryResizeWidth();
+// 	};
+// };
+
+// sliderBeeforeAfterPC()
+
+// sliderSwitchImg.addEventListener('touchstart', $, {passive: true});
+// function $(event) {
+// 	console.log(event)
+// }
+
+sliderSwitchImg.addEventListener('touchstart', sliderBeeforeAfterPC, {passive: true});
+
 function sliderBeeforeAfterPC () {
 
-	sliderSwitchImg.onpointerdown = function (event) {
-		
-		event.preventDefault();
-
-		scrollLoc();
-
 		function onDrag(event) {
-		sliderSwitchImg.style.marginLeft = event.layerX + 'px';
+		sliderSwitchImg.style.marginLeft = event.touches[0].pageX - event.touches[0].target.offsetLeft + 'px';
 		galleryResizeWidth();
 		};
 
-		document.body.addEventListener('pointermove', onDrag);
+		document.body.addEventListener('touchmove', onDrag, {passive: true});
 
 		function pointerLose() {
-		document.body.removeEventListener('pointermove', onDrag);
+		document.body.removeEventListener('touchmove', onDrag, {passive: true});
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
-		scrollUnlock();
 		}
 
-		document.body.addEventListener('pointerup', pointerLose);
+		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
 
-		document.body.addEventListener('pointercancel', pointerLose);
-
-		sliderSwitch.addEventListener('pointerleave', pointerLose);
+		sliderSwitch.addEventListener('toucend', pointerLose, {passive: true});
 
 		galleryResizeWidth();
-	};
 };
 
-sliderBeeforeAfterPC()
- 
+
+
 // // Для смартфона:
 // function sliderBeeforeAfterMobile () {
 
