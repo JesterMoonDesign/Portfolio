@@ -183,7 +183,7 @@ function sliderBeeforeAfterPC () {
 //					Сладйер для смартфона					
 function sliderBeeforeAfterMobile () {
 
-	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
+	sliderSwitch.addEventListener('touchstart', sliderWork);
 
 	function sliderWork () {
 
