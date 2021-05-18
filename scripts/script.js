@@ -205,7 +205,7 @@ function sliderBeeforeAfterMobile () {
 		scrollUnlock();
 		};
 
-		document.body.addEventListener('touchend', pointerLose, );
+		document.body.addEventListener('touchcancel', pointerLose, );
 
 		galleryResizeWidth();
 	};
