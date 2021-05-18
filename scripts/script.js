@@ -197,17 +197,17 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 		};
 
-		document.body.addEventListener('touchmove', onDrag, {passive: true});
+		sliderSwitch.addEventListener('touchmove', onDrag, {passive: true});
 
 		function pointerLose() {
-		document.body.removeEventListener('touchmove', onDrag, {passive: true});
+		sliderSwitch.removeEventListener('touchmove', onDrag, {passive: true});
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
 		}
 
-		document.body.addEventListener('touchcup', pointerLose, {passive: true});
+		sliderSwitch.addEventListener('touchcup', pointerLose, {passive: true});
 
-		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
+		sliderSwitch.addEventListener('touchcancel', pointerLose, {passive: true});
 
 		sliderSwitch.addEventListener('toucend', pointerLose, {passive: true});
 
