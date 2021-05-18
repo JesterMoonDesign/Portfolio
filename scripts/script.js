@@ -190,6 +190,10 @@ galleryResizeWidth()
 // }
 
 
+function pointerEventsDisabler () {
+	sliderSwitchImg.style.pointerEvents = "none";
+}
+
 function sliderBeeforeAfterPC () {
 
 		function onDrag(event) {
@@ -197,12 +201,15 @@ function sliderBeeforeAfterPC () {
 		galleryResizeWidth();
 		};
 
+		scrollLoc();
+
 		document.body.addEventListener('touchmove', onDrag, {passive: true});
 
 		function pointerLose() {
 		document.body.removeEventListener('touchmove', onDrag, );
 		sliderSwitchImg.style.marginLeft = parseInt(sliderSwitchPosition.width) / 2 + 'px';
 		galleryResizeWidth();
+		scrollUnlock();
 		}
 
 		// sliderSwitch.addEventListener('touchcup', pointerLose, {passive: true});
@@ -213,7 +220,7 @@ function sliderBeeforeAfterPC () {
 
 		galleryResizeWidth();
 };
-
+pointerEventsDisabler();
 sliderSwitch.addEventListener('touchstart', sliderBeeforeAfterPC, {passive: true});
 
 
