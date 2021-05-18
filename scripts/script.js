@@ -183,7 +183,7 @@ function sliderBeeforeAfterPC () {
 //					Сладйер для смартфона					
 function sliderBeeforeAfterMobile () {
 
-	sliderSwitch.addEventListener('touchstart', sliderWork);
+	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
 
 	function sliderWork () {
 
@@ -205,7 +205,9 @@ function sliderBeeforeAfterMobile () {
 		scrollUnlock();
 		};
 
-		document.body.addEventListener('touchcancel', pointerLose, );
+		document.body.addEventListener('touchend', pointerLose, );
+
+		document.body.addEventListener('touchcancel', () => console.log('андроид хуйня') );
 
 		galleryResizeWidth();
 	};
