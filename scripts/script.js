@@ -145,7 +145,9 @@ const gallery = document.querySelector('.gallery'),
 		sliderSwitchImgPosition = getComputedStyle(sliderSwitchImg);
 
 function galleryAdaptive () {
-		sliderSwitchImg.style.transform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)";
+		sliderSwitchImg.style.transform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)",
+		sliderSwitchImg.style.WebkitTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)",
+		sliderSwitchImg.style.MozTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)";
 		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
 }
 
@@ -160,7 +162,9 @@ function sliderBeeforeAfterPC () {
 
 		function onDrag(event) {
 		let x = event.layerX;
-		sliderSwitchImg.style.transform = "translateX(" + x + 'px)';
+		sliderSwitchImg.style.transform = "translateX(" + x + 'px)' ,
+		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)' ,
+		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		};
 
@@ -183,7 +187,7 @@ function sliderBeeforeAfterPC () {
 
 //					Сладйер для смартфона					
 
-
+sliderBeeforeAfterMobile()
 function sliderBeeforeAfterMobile () {
 
 	sliderSwitch.addEventListener('touchstart', sliderWork);
@@ -193,7 +197,9 @@ function sliderBeeforeAfterMobile () {
 		function onDrag(event) {
 		sliderSwitchImg.style.pointerEvents = "none";
 		let x = event.targetTouches[0].pageX - event.targetTouches[0].target.offsetLeft;
-		sliderSwitchImg.style.transform = "translateX(" + x + 'px)';
+		sliderSwitchImg.style.transform = "translateX(" + x + 'px)' ,
+		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)',
+		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		};
 
