@@ -1404,13 +1404,14 @@ cursor: pointer;
 
 .gallery_resize {
 	content: '';
-	width: 0%;
+	width: 100%;
 	background-color: #fff;
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
 	height: 100%;
 	z-index: 20;
+	clip: rect(auto,220px,auto,auto);
 	transition:0.01s;
 }
 
@@ -1435,8 +1436,8 @@ cursor: pointer;
 	height: 100%;
 	object-fit: none;
 	object-position: center;
-	margin-left: 50%;
 	cursor: pointer;
+	transform: translateX(200px);
 }
 
 
