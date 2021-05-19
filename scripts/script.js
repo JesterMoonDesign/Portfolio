@@ -177,6 +177,8 @@ function sliderBeeforeAfterPC () {
 
 		sliderSwitch.addEventListener('pointerleave', pointerLose);
 
+		return false;
+
 	};
 };
 
