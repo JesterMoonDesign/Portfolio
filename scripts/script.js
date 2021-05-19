@@ -177,8 +177,6 @@ function sliderBeeforeAfterPC () {
 
 		sliderSwitch.addEventListener('pointerleave', pointerLose);
 
-		return false;
-
 	};
 };
 
@@ -193,9 +191,8 @@ function sliderBeeforeAfterMobile () {
 	function sliderWork () {
 
 		function onDrag(event) {
-		event.preventDefault();
 		sliderSwitchImg.style.pointerEvents = "none";
-		let x = event.touches[0].pageX - event.touches[0].target.offsetLeft;
+		let x = event.targetTouches[0].pageX - event.targetTouches[0].target.offsetLeft;
 		sliderSwitchImg.style.transform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		};
@@ -214,7 +211,9 @@ function sliderBeeforeAfterMobile () {
 
 		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
 
-		sliderSwitch.addEventListener('pointerleave', pointerLose, {passive: true});
+		// sliderSwitch.addEventListener('pointerleave', pointerLose, {passive: true});
+
+		return false;
 
 	};
 };
