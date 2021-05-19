@@ -179,7 +179,7 @@ function sliderBeeforeAfterPC () {
 
 	};
 };
-// {passive: true}
+
 
 //					Сладйер для смартфона					
 
@@ -208,7 +208,11 @@ function sliderBeeforeAfterMobile () {
 		scrollUnlock();
 		};
 
-		document.body.addEventListener('touchend', pointerLose, );
+		document.body.addEventListener('touchend', pointerLose, {passive: true});
+
+		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
+
+		sliderSwitch.addEventListener('pointerleave', pointerLose, {passive: true});
 
 	};
 };
