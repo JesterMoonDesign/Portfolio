@@ -1446,7 +1446,7 @@ cursor: pointer;
 }
 
 .tr {
-	transition: 0.3s;
+	transition: all 0.5s;
 }
 
 .gallery_resize {
