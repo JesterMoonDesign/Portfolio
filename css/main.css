@@ -2151,12 +2151,12 @@ cursor: pointer;
 	.copy-allert {
 	position: absolute;
 	left: auto;
-	top: 35%;
+	top: 31%;
 	}
 	.copy-allert.active {
 	position: absolute;
 	left: auto;
-	top: 35%;
+	top: 31%;
 	}
 }
 
@@ -2355,6 +2355,9 @@ footer a {
 
 @media (min-width: 100px) and (max-width: 500px) and (orientation: portrait) {
 	.main-page-section-1 {
+		display: none;
+	}
+	.header {
 		display: none;
 	}
 	.nav {
