@@ -39,9 +39,22 @@ function scrollUnlock() {
 							// МЕНЮ БУРГЕР								
 const menuBurger = document.querySelector('.burger-list'),
 		burger = document.querySelector('.burger');
-burger.addEventListener('click', () => {
-	menuBurger.classList.toggle('active');
+		burger.addEventListener('click', () => {
+		menuBurger.classList.toggle('active');
 });
+//														ССЫЛКИ-ЯКОРЯ														
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+	anchor.addEventListener("click", function (event) {
+		event.preventDefault();
+		const blockID = anchor.getAttribute('href');
+		document.querySelector('' + blockID).scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		})
+	})
+}
 									 // СЛАЙДЕР 							
 
 const prev = document.getElementById('btn-prev'),
@@ -102,11 +115,6 @@ dots.forEach ((item, indexDot) => {
 });
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
-const contactsBtn = document.querySelector('.contacts-btn');
-let contactsPage =  document.querySelector('.contacts-wraper');
-contactsBtn.addEventListener('click', () => {
-	contactsPage.classList.toggle('active');
-});
 					// СЛАДЙЕР BEEFORE/AFTER									
 const gallery = document.querySelector('.gallery'),
 		galleryWidth = getComputedStyle(gallery),
@@ -175,3 +183,32 @@ if (isMobile.any()) {
 } else {
 	sliderBeeforeAfterPC ();
 };
+//					КОНТАКТЫ								
+const contactsBtn = document.querySelector('.contacts-btn');
+let contactsPage =  document.querySelector('.contacts-wraper');
+contactsBtn.addEventListener('click', () => {
+	contactsPage.classList.toggle('active');
+});
+//					КОПИРОВАНИЕ ЕМАЙЛА
+const textToCopy = document.querySelector('.text_to_copy');
+const copyAllert = document.querySelector('.copy-allert')
+// function copyText() {
+// 	textToCopy.select();
+// 	document.execCommand("copy");
+// }
+
+textToCopy.addEventListener('click', copyText)
+
+function copyText() {
+	let copytext = document.createElement('input');
+	copytext.value = textToCopy.value;
+	document.body.appendChild(copytext);
+	copytext.select();
+	document.execCommand('copy');
+	document.body.removeChild(copytext);
+	showAllert();
+	function showAllert() {
+		copyAllert.classList.add('active');
+		setTimeout(() => copyAllert.classList.remove('active'), 1000);
+	}
+}
