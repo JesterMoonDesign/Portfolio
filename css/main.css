@@ -2062,6 +2062,7 @@ cursor: pointer;
 }
 
 .email button {
+	padding-top: 5px;
 	font-family: De Valencia;
 	font-size: 4em;
 	letter-spacing: -0.05em;
@@ -2147,6 +2148,10 @@ cursor: pointer;
 	}
 	#email-pre span {
 		display: none;
+	}
+	.email button:hover {
+	background: none;
+	color: #808080;
 	}
 	.copy-allert {
 	position: absolute;
