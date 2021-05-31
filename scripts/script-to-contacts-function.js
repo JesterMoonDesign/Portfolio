@@ -21,12 +21,12 @@ function activeCheck () {
 
 function scrollToContacts() {
 
-	if (document.location.href == 'file:///E:/Art/Web%20design/My%20portfolio/Portfolio/Portfolio/index.html') {
+	if (document.location.href == 'https://jestermoondesign.github.io/portfolio/index.html') {
 	activeCheck ();
 	} else {
 
 		function goToContacts() { 
-			window.location.href = 'file:///E:/Art/Web%20design/My%20portfolio/Portfolio/Portfolio/index.html';
+			window.location.href = 'https://jestermoondesign.github.io/portfolio/index.html';
 		};
 		sessionStorage.setItem('toContacts', 'activateContacts');
 		goToContacts();
