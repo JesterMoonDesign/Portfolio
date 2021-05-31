@@ -26,7 +26,7 @@ function scrollToContacts() {
 	} else {
 
 		function goToContacts() { 
-			window.location.href = 'https://jestermoondesign.github.io/portfolio/index.html';
+			document.location.assign ('https://jestermoondesign.github.io/portfolio/index.html');
 		};
 		sessionStorage.setItem('toContacts', 'activateContacts');
 		goToContacts();
