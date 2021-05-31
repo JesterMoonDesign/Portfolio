@@ -183,19 +183,64 @@ if (isMobile.any()) {
 } else {
 	sliderBeeforeAfterPC ();
 };
-//					КОНТАКТЫ								
+
+
+
+										//КОНТАКТЫ												
 const contactsBtn = document.querySelector('.contacts-btn');
 let contactsPage =  document.querySelector('.contacts-wraper');
-contactsBtn.addEventListener('click', () => {
-	contactsPage.classList.toggle('active');
-});
-//					КОПИРОВАНИЕ ЕМАЙЛА
+
+contactsBtn.addEventListener('click', mailToggleActive);
+
+function mailToggleActive() {
+		contactsPage.classList.toggle('active');
+	};
+
+									//РЕАЛИЗАЦИЯ КОНТАКТОВ													
+const contactAnchor = document.querySelector('.mail-to-link')
+
+contactAnchor.addEventListener("click", scrollToContacts) 
+
+function contactsPageScroll() {contactsPage.scrollIntoView({
+behavior: "smooth",
+block: "start"
+})};
+
+function activeCheck () {
+	if (contactsPage.classList.contains("active")) {
+		contactsPageScroll();
+	} else { 
+		mailToggleActive();
+		setTimeout(() => contactsPageScroll(), 300);
+	};
+}
+
+function scrollToContacts() {
+
+	if (document.location.href == 'file:///E:/Art/Web%20design/My%20portfolio/Portfolio/Portfolio/index.html') {
+	activeCheck ();
+	} else {
+
+		function goToContacts() { 
+			window.location.href = 'file:///E:/Art/Web%20design/My%20portfolio/Portfolio/Portfolio/index.html';
+		};
+		sessionStorage.setItem('toContacts', 'activateContacts');
+		goToContacts();
+	}
+}
+
+function activeContacts () {
+	if (sessionStorage.getItem('toContacts') == 'activateContacts') {
+		activeCheck ();
+		sessionStorage.clear();
+	}
+}
+
+activeContacts ();
+
+										//КОПИРОВАНИЕ ЕМАЙЛА																
 const textToCopy = document.querySelector('.text_to_copy');
 const copyAllert = document.querySelector('.copy-allert')
-// function copyText() {
-// 	textToCopy.select();
-// 	document.execCommand("copy");
-// }
 
 textToCopy.addEventListener('click', copyText)
 
@@ -212,3 +257,4 @@ function copyText() {
 		setTimeout(() => copyAllert.classList.remove('active'), 1000);
 	}
 }
+
