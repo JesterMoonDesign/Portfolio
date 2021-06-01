@@ -71,8 +71,6 @@ btnToTop.addEventListener('click', toTop);
 window.addEventListener('scroll', scrollTrack);
 })();
 
-
-
 //														ССЫЛКИ-ЯКОРЯ														
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -86,7 +84,7 @@ for (let anchor of anchors) {
 		})
 	})
 }
-									 // СЛАЙДЕР 							
+//														СЛАЙДЕР											
 const prev = document.getElementById('btn-prev'),
 		next = document.getElementById('btn-next'),
 		slides = document.querySelectorAll('.slide'),
@@ -145,7 +143,8 @@ dots.forEach ((item, indexDot) => {
 });
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
-					// СЛАДЙЕР BEEFORE/AFTER									
+
+//										СЛАДЙЕР BEEFORE/AFTER									
 const gallery = document.querySelector('.gallery'),
 		galleryWidth = getComputedStyle(gallery),
 		galleryResize = document.querySelector('.gallery_resize'),
@@ -160,7 +159,7 @@ function galleryAdaptive () {
 		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
 };
 galleryAdaptive ()
-//					Слайдер для пк						
+//													Слайдер для пк						
 function sliderBeeforeAfterPC () {
 	sliderSwitchImg.onpointerdown = function (event) {
 		event.preventDefault();
@@ -181,7 +180,7 @@ function sliderBeeforeAfterPC () {
 		sliderSwitch.addEventListener('pointerleave', pointerLose);
 	};
 };
-//					Сладйер для смартфона					
+//													Сладйер для смартфона					
 sliderBeeforeAfterMobile()
 function sliderBeeforeAfterMobile () {
 	sliderSwitch.addEventListener('touchstart', sliderWork);
@@ -214,11 +213,9 @@ if (isMobile.any()) {
 	sliderBeeforeAfterPC ();
 };
 
-
-
-										//КОНТАКТЫ												
-const contactsBtn = document.querySelector('.contacts-btn');
-let contactsPage =  document.querySelector('.contacts-wraper');
+//														КОНТАКТЫ												
+const contactsBtn = document.querySelector('.contacts-btn'),
+		contactsPage = document.querySelector('.contacts-wraper');
 
 contactsBtn.addEventListener('click', mailToggleActive);
 
@@ -226,7 +223,7 @@ function mailToggleActive() {
 		contactsPage.classList.toggle('active');
 	};
 
-									//РЕАЛИЗАЦИЯ КОНТАКТОВ													
+//												РЕАЛИЗАЦИЯ КОНТАКТОВ													
 const contactAnchor = document.querySelector('.mail-to-link')
 
 contactAnchor.addEventListener("click", scrollToContacts) 
