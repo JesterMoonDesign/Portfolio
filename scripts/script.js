@@ -36,12 +36,43 @@ function scrollLoc() {
 function scrollUnlock() {
 	document.body.classList.remove('no_croll');
 };
-							// МЕНЮ БУРГЕР								
-const menuBurger = document.querySelector('.burger-list'),
-		burger = document.querySelector('.burger');
-		burger.addEventListener('click', () => {
-		menuBurger.classList.toggle('active');
-});
+//															МЕНЮ БУРГЕР															
+(function() {const menuBurger = document.querySelector('.burger-list'),
+			burger = document.querySelector('.burger');
+			burger.addEventListener('click', () => {
+			menuBurger.classList.toggle('active');
+	})
+})();
+
+//														ПРОКРУТКА НАВЕРХ										
+(function() {
+const btnToTop = document.querySelector('.arrow-to-up');
+
+function scrollTrack() {
+	let scrolled = window.pageYOffset;
+	let coords = document.documentElement.clientHeight;
+	if (scrolled > coords) {
+		btnToTop.classList.add('show');
+	}
+	if (scrolled < coords) {
+		btnToTop.classList.remove('show');
+	}
+}
+
+function toTop() {
+	if (window.pageYOffset > 0) {
+	window.scrollBy(0, -75);
+	setTimeout(toTop, 15);
+	}
+}
+
+btnToTop.addEventListener('click', toTop);
+
+window.addEventListener('scroll', scrollTrack);
+})();
+
+
+
 //														ССЫЛКИ-ЯКОРЯ														
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -56,7 +87,6 @@ for (let anchor of anchors) {
 	})
 }
 									 // СЛАЙДЕР 							
-
 const prev = document.getElementById('btn-prev'),
 		next = document.getElementById('btn-next'),
 		slides = document.querySelectorAll('.slide'),
