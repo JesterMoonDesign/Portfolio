@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const isMobile = {
 	Andorid: function () {
@@ -29,19 +29,19 @@ if (isMobile.any()) {
 	document.body.classList.add('_touch');
 } else {
 	document.body.classList.add('_pc');
-};
+}
 function scrollLoc() {
 	document.body.classList.add('no_croll');
-};
+}
 function scrollUnlock() {
 	document.body.classList.remove('no_croll');
-};
+}
 //															МЕНЮ БУРГЕР															
 (function() {const menuBurger = document.querySelector('.burger-list'),
 			burger = document.querySelector('.burger');
 			burger.addEventListener('click', () => {
 			menuBurger.classList.toggle('active');
-	})
+	});
 })();
 
 //														ПРОКРУТКА НАВЕРХ										
@@ -72,7 +72,7 @@ window.addEventListener('scroll', scrollTrack);
 })();
 
 //														ССЫЛКИ-ЯКОРЯ														
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
 	anchor.addEventListener("click", function (event) {
@@ -81,8 +81,8 @@ for (let anchor of anchors) {
 		document.querySelector('' + blockID).scrollIntoView({
 			behavior: "smooth",
 			block: "nearest"
-		})
-	})
+		});
+	});
 }
 //														СЛАЙДЕР											
 const prev = document.getElementById('btn-prev'),
@@ -95,13 +95,13 @@ let index = 0,
 const prepareCurrentSlide = ind => {
 	activeSlide(ind);
 	activeDot(ind);
-}
+};
 const activeDot = n => {
 	for(dot of dots) {
 	dot.classList.remove('active');
 	}
 	dots[n].classList.add('active');
-}
+};
 const nextDot = () => {
 	if(index == slides.length - 1) {
 	index = 0;
@@ -110,7 +110,7 @@ const nextDot = () => {
 	index++;
 	activeSlide(index);
 	}
-}
+};
 const activeSlide = n => {
 	for(slide of slides) {
 	slide.classList.remove('active');
@@ -127,7 +127,7 @@ const nextSlide = () => {
 	}
 };
 const prevSlide = () => {
-	if(index == 0) {
+	if(index === 0) {
 	index = slides.length - 1;
 	prepareCurrentSlide(index);
 	} else {
@@ -157,8 +157,8 @@ function galleryAdaptive () {
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)",
 		sliderSwitchImg.style.MozTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)";
 		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
-};
-galleryAdaptive ()
+}
+galleryAdaptive ();
 //													Слайдер для пк						
 function sliderBeeforeAfterPC () {
 	sliderSwitchImg.onpointerdown = function (event) {
@@ -169,19 +169,19 @@ function sliderBeeforeAfterPC () {
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)' ,
 		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
-		};
+		}
 		document.body.addEventListener('pointermove', onDrag);
 		function pointerLose() {
 		document.body.removeEventListener('pointermove', onDrag);
-		galleryAdaptive ()
+		galleryAdaptive ();
 		}
 		document.body.addEventListener('pointerup', pointerLose);
 		document.body.addEventListener('pointercancel', pointerLose);
 		sliderSwitch.addEventListener('pointerleave', pointerLose);
 	};
-};
+}
 //													Сладйер для смартфона					
-sliderBeeforeAfterMobile()
+sliderBeeforeAfterMobile();
 function sliderBeeforeAfterMobile () {
 	sliderSwitch.addEventListener('touchstart', sliderWork);
 	function sliderWork () {
@@ -192,26 +192,26 @@ function sliderBeeforeAfterMobile () {
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)',
 		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
-		};
+		}
 		scrollLoc();
 		document.body.addEventListener('touchmove', onDrag);
 		function pointerLose() {
 		document.body.removeEventListener('touchmove', onDrag);
 		galleryAdaptive ();
 		scrollUnlock();
-		};
+		}
 		document.body.addEventListener('touchend', pointerLose);
 		document.body.addEventListener('touchcancel', pointerLose, {passive: true});
 		sliderSwitch.addEventListener('touchleave', pointerLose, {passive: true});
 		return false;
-	};
-};
+	}
+}
 
 if (isMobile.any()) {
 	sliderBeeforeAfterMobile ();
 } else {
 	sliderBeeforeAfterPC ();
-};
+}
 
 //														КОНТАКТЫ												
 const contactsBtn = document.querySelector('.contacts-btn'),
@@ -221,17 +221,17 @@ contactsBtn.addEventListener('click', mailToggleActive);
 
 function mailToggleActive() {
 		contactsPage.classList.toggle('active');
-	};
+	}
 
 //												РЕАЛИЗАЦИЯ КОНТАКТОВ													
-const contactAnchor = document.querySelector('.mail-to-link')
+const contactAnchor = document.querySelector('.mail-to-link');
 
-contactAnchor.addEventListener("click", activeCheck) 
+contactAnchor.addEventListener("click", activeCheck);
 
 function contactsPageScroll() {contactsPage.scrollIntoView({
 behavior: "smooth",
 block: "start"
-})};
+});}
 
 function activeCheck () {
 	if (contactsPage.classList.contains("active")) {
@@ -239,7 +239,7 @@ function activeCheck () {
 	} else { 
 		mailToggleActive();
 		setTimeout(() => contactsPageScroll(), 300);
-	};
+	}
 }
 
 function scrollToContacts() {
@@ -250,7 +250,7 @@ function scrollToContacts() {
 
 		function goToContacts() { 
 			document.location.assign ('https://jestermoondesign.github.io/portfolio/index.html');
-		};
+		}
 		sessionStorage.setItem('toContacts', 'activateContacts');
 		goToContacts();
 	}
@@ -267,9 +267,9 @@ activeContacts ();
 
 										//КОПИРОВАНИЕ ЕМАЙЛА																
 const textToCopy = document.querySelector('.text_to_copy');
-const copyAllert = document.querySelector('.copy-allert')
+const copyAllert = document.querySelector('.copy-allert');
 
-textToCopy.addEventListener('click', copyText)
+textToCopy.addEventListener('click', copyText);
 
 function copyText() {
 	let copytext = document.createElement('input');
