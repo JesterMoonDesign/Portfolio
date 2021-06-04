@@ -61,8 +61,8 @@ function scrollTrack() {
 
 function toTop() {
 	if (window.pageYOffset > 0) {
-	window.scrollBy(0, -75);
-	setTimeout(toTop, 15);
+	window.scrollBy(0, -80);
+	setTimeout(toTop, 10);
 	}
 }
 
@@ -226,7 +226,7 @@ function mailToggleActive() {
 //												РЕАЛИЗАЦИЯ КОНТАКТОВ													
 const contactAnchor = document.querySelector('.mail-to-link')
 
-contactAnchor.addEventListener("click", scrollToContacts) 
+contactAnchor.addEventListener("click", activeCheck) 
 
 function contactsPageScroll() {contactsPage.scrollIntoView({
 behavior: "smooth",
