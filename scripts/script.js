@@ -228,9 +228,9 @@ const contactAnchor = document.querySelector('.mail-to-link');
 
 contactAnchor.addEventListener("click", activeCheck);
 
-function contactsPageScroll() {contactsPage.scrollIntoView({
+function contactsPageScroll() {contactAnchor.scrollIntoView({
 behavior: "smooth",
-block: "start"
+block: "end"
 });}
 
 function activeCheck () {
