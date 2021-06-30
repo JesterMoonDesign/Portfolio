@@ -663,7 +663,7 @@ section {
 }
 
 @media (max-width: 1200px){
-	.page-4-slider {
+	.page-4-content.active .page-4-slider {
 	width: 80%;
 	padding-top: 45%;
 	margin: 2% auto;
