@@ -96,12 +96,14 @@ const prepareCurrentSlide = ind => {
 	activeSlide(ind);
 	activeDot(ind);
 };
+
 const activeDot = n => {
 	for(dot of dots) {
 	dot.classList.remove('active');
 	}
 	dots[n].classList.add('active');
 };
+
 const nextDot = () => {
 	if(index == slides.length - 1) {
 	index = 0;
@@ -117,7 +119,7 @@ const activeSlide = n => {
 	}
 	slides[n].classList.add('active');
 };
-const nextSlide = () => {
+function nextSlide () {
 	if(index == slides.length - 1) {
 	index = 0;
 	prepareCurrentSlide(index);
@@ -125,8 +127,9 @@ const nextSlide = () => {
 	index++;
 	prepareCurrentSlide(index);
 	}
+	sliderClearTimeout ();
 };
-const prevSlide = () => {
+function prevSlide () {
 	if(index === 0) {
 	index = slides.length - 1;
 	prepareCurrentSlide(index);
@@ -134,16 +137,24 @@ const prevSlide = () => {
 	index--;
 	prepareCurrentSlide(index);
 	}
+	sliderClearTimeout ();
 };
 dots.forEach ((item, indexDot) => {
 	item.addEventListener('click', () => {
 	index = indexDot;
 	prepareCurrentSlide(index);
+	sliderClearTimeout ();
 	});
 });
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 
+let sliderSetTimeout = setInterval(nextSlide, 2500);
+
+function sliderClearTimeout () {
+	clearInterval(sliderSetTimeout);
+	sliderSetTimeout = setInterval(nextSlide, 2500);
+}
 //										СЛАДЙЕР BEEFORE/AFTER									
 const gallery = document.querySelector('.gallery'),
 		galleryWidth = getComputedStyle(gallery),
