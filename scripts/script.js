@@ -170,7 +170,7 @@ function galleryAdaptive () {
 		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
 }
 galleryAdaptive ();
-//													Слайдер для пк						
+//													Слайдер BEEFORE/AFTER для пк						
 function sliderBeeforeAfterPC () {
 	sliderSwitchImg.onpointerdown = function (event) {
 		event.preventDefault();
@@ -191,7 +191,7 @@ function sliderBeeforeAfterPC () {
 		sliderSwitch.addEventListener('pointerleave', pointerLose);
 	};
 }
-//													Сладйер для смартфона					
+//													Сладйер BEEFORE/AFTER для смартфона					
 sliderBeeforeAfterMobile();
 function sliderBeeforeAfterMobile () {
 	sliderSwitch.addEventListener('touchstart', sliderWork);
