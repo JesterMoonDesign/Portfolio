@@ -101,12 +101,7 @@ function galleryModal () {
 
 		const body = document.querySelector('.gallery__body');
 		const imageContainer = document.querySelector('.image');
-		const bodyHeight = e.path[4].clientHeight;
-
-			imageBg.style.transform = 'translate(-50%, 0px)';
-			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
-
-		console.log(e, e.path[0])
+		const bodyHeight = body.clientHeight;
 		let imageHeight = 0;
 
 		let image = this.children[0];
@@ -123,10 +118,10 @@ function galleryModal () {
 
 		modalImg.onload = function() {
 		imageHeight = modalImg.height;
+		imageBg.style.transform = 'translate(-50%, 0px)';
+		imageBg.style.webkitTransform = 'translate(-50%, 0px)';
 
 			if (imageHeight > (bodyHeight -200)) {
-			imageBg.style.transform = 'translate(-50%, 0px)';
-			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
 			imageBg.style.transition = 'none';
 			imageBg.style.WebkitTransition = 'none';
 			imageBg.style.MozTransition = 'none';
