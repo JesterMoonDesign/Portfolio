@@ -119,7 +119,7 @@ function galleryModal () {
 					imageBg.style.webkitTransform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
 				} else {};
 			} else {
-					if (x <= (bodyHeight - x - 200)) { //!!!!!
+					if (x <= (bodyHeight - x - 100)) { //!!!!!
 						imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
 						imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
 					}
