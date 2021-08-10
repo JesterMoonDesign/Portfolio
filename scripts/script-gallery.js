@@ -110,7 +110,8 @@ function galleryModal () {
 		function moveModal (event) {
 			x = event.target.scrollingElement.scrollTop;
 			if (x <= imageHeight - (bodyHeight - 200)) {
-				imageBg.style.top = x + 'px';
+				imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+				imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
 			} else {};
 		};
 
@@ -119,7 +120,8 @@ function galleryModal () {
 		imageHeight = modalImg.height;
 
 			if (imageHeight > (bodyHeight -200)) {
-			imageBg.style.top = x;
+			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
 			imageBg.style.transition = 'none';
 			imageBg.style.WebkitTransition = 'none';
 			imageBg.style.MozTransition = 'none';
@@ -133,7 +135,8 @@ function galleryModal () {
 		modal.addEventListener('click', closeModal);
 
 		function closeModal () {
-			imageBg.style.top = 0;
+			imageBg.style.transform = 'translate(-50%,' + 0 + 'px)';
+			imageBg.style.webkitTransform = 'translate(-50%,' + 0 + 'px)';
 			window.removeEventListener('scroll', moveModal);
 			modal.style.transition = 'all linear 0.2s';
 			modal.style.WebkitTransition = 'all linear 0.2s';
