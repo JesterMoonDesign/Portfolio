@@ -82,9 +82,11 @@ function galleryModal () {
 
 	const imagesWrapers = document.querySelectorAll('.image__wraper');
 	const modal = document.querySelector('.modal');
+	const imageBg = document.querySelector('.image__bg');
 	const modalFrame = document.querySelector('.modal__content');
 	let modalImg = document.querySelector('.modal__image');
 	const wrapers = [];
+	let x = 0;
 
 	for (let i = 0; i < imagesWrapers.length; i++) {
 		wrapers.push(imagesWrapers[i])
@@ -95,19 +97,44 @@ function galleryModal () {
 	};
 
 
-	function openModal () {
-		let image = this.children[0];
-			modal.style.transition = 'none';
-			modal.style.WebkitTransition = 'none';
-			modal.style.MozTransition = 'none';
+	function openModal (e) {
 
-		modal.classList.add('active');
+		const body = document.querySelector('.gallery__body');
+		const imageContainer = document.querySelector('.image');
+		const bodyHeight = e.path[4].clientHeight;
+		let imageHeight = 0;
+
+		let image = this.children[0];
 		modalImg.src = image.src;
 
+		function moveModal (event) {
+			x = event.target.scrollingElement.scrollTop;
+			if (x <= imageHeight - (bodyHeight - 200)) {
+				imageBg.style.top = x + 'px';
+			} else {};
+		};
+
+
+		modalImg.onload = function() {
+		imageHeight = modalImg.height;
+
+			if (imageHeight > (bodyHeight -200)) {
+			imageBg.style.top = x;
+			imageBg.style.transition = 'none';
+			imageBg.style.WebkitTransition = 'none';
+			imageBg.style.MozTransition = 'none';
+			window.addEventListener('scroll', moveModal);
+			};
+
+		};
+
+		modal.classList.add('active');
 
 		modal.addEventListener('click', closeModal);
 
 		function closeModal () {
+			imageBg.style.top = 0;
+			window.removeEventListener('scroll', moveModal);
 			modal.style.transition = 'all linear 0.2s';
 			modal.style.WebkitTransition = 'all linear 0.2s';
 			modal.style.MozTransition = 'all linear 0.2s';
@@ -115,6 +142,6 @@ function galleryModal () {
 			modal.removeEventListener('click', closeModal);
 		};
 
-	}
+	};
 
 }; galleryModal ();
