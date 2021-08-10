@@ -115,12 +115,12 @@ function galleryModal () {
 
 			if (query.matches) {
 				if (x <= imageHeight - (bodyHeight - 200)) { //!!!!!
-					imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-					imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+					imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
+					imageBg.style.webkitTransform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
 				} else {};
 			} else {
 					if (x <= (bodyHeight - x - 200)) { //!!!!!
-						imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+						imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
 						imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
 					}
 			}
@@ -131,8 +131,8 @@ function galleryModal () {
 		imageHeight = modalImg.height;
 		if (!query.matches) {
 			x = e.pageY - e.clientY;
-			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
+			imageBg.style.webkitTransform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
 		}
 		imageBg.style.transition = 'none';
 		imageBg.style.WebkitTransition = 'none';
