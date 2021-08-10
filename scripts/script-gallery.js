@@ -102,6 +102,11 @@ function galleryModal () {
 		const body = document.querySelector('.gallery__body');
 		const imageContainer = document.querySelector('.image');
 		const bodyHeight = e.path[4].clientHeight;
+
+			imageBg.style.transform = 'translate(-50%, 0px)';
+			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
+
+		console.log(e, e.path[0])
 		let imageHeight = 0;
 
 		let image = this.children[0];
@@ -120,8 +125,8 @@ function galleryModal () {
 		imageHeight = modalImg.height;
 
 			if (imageHeight > (bodyHeight -200)) {
-			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.transform = 'translate(-50%, 0px)';
+			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
 			imageBg.style.transition = 'none';
 			imageBg.style.WebkitTransition = 'none';
 			imageBg.style.MozTransition = 'none';
@@ -135,8 +140,8 @@ function galleryModal () {
 		modal.addEventListener('click', closeModal);
 
 		function closeModal () {
-			imageBg.style.transform = 'translate(-50%,' + 0 + 'px)';
-			imageBg.style.webkitTransform = 'translate(-50%,' + 0 + 'px)';
+			imageBg.style.transform = 'translate(-50%, 0px)';
+			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
 			window.removeEventListener('scroll', moveModal);
 			modal.style.transition = 'all linear 0.2s';
 			modal.style.WebkitTransition = 'all linear 0.2s';
