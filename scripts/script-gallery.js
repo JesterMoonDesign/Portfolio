@@ -125,14 +125,14 @@ function galleryModal () {
 					}
 			}
 		};
-
+		console.log(query)
 
 		modalImg.onload = function() {
 		imageHeight = modalImg.height;
 		if (!query.matches) {
 			x = e.pageY - e.clientY;
-			imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
-			imageBg.style.webkitTransform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
+			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
 		}
 		imageBg.style.transition = 'none';
 		imageBg.style.WebkitTransition = 'none';
