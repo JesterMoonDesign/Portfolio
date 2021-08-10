@@ -2217,12 +2217,10 @@ footer a {
 	left: 0;
 	top: 0;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	display: none;
 	align-items: center;
 	justify-content: center;
-	transform: translate(0, -100vh);
-	-webkit-transform: translate(0, -100vh);
 	transition: all linear 0.2s 0.1s;
 	-webkit-transition: all linear 0.2s 0.1s;
 	-moz-transition: all linear 0.2s 0.1s;
@@ -2230,11 +2228,10 @@ footer a {
 
 .modal.active {
 	display: flex;
-	transform: translate(0, 0);
-	-webkit-transform: translate(0, 0);
 	transition: all linear 0.2s 0.1s;
 	-webkit-transition: all linear 0.2s 0.1s;
 	-moz-transition: all linear 0.2s 0.1s;
+	cursor: pointer;
 }
 
 .modal__content {
@@ -2258,13 +2255,12 @@ footer a {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
+	transform: translate(-50%, 0);
+	-webkit-transform: translateY(-50%, 0);
 	padding-top: 30%;
 	margin-top: -30%;
 	z-index: -1;
 	width: 100vw;
-	height: 100vh;
 	min-height: 130vh;
 	background: rgba(0, 0, 0, 0.6);
 }
@@ -2274,6 +2270,25 @@ footer a {
 	max-height: min-content;
 	height: auto;
 	object-fit: contain;
+}
+
+@media (max-width: 768px) {
+	.modal__content {
+	top: 28%;
+	width: 90vw;
+	}
+	.image__bg {
+	padding-top: 70%;
+	margin-top: -70%;
+	height: 100%;
+	}
+	.image {
+/*	transform: translate(0, 28%);*/
+	}
+	.modal__image {
+/*	transform: translate(0, 15%);*/
+	width: 90vw;
+	}
 }
 
 /*										Странца обо мне/абаут/About									*/

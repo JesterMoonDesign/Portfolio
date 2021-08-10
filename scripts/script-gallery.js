@@ -88,7 +88,7 @@ function galleryModal () {
 	const modalFrame = document.querySelector('.modal__content');
 	let modalImg = document.querySelector('.modal__image');
 	const wrapers = [];
-	let x = 0;
+
 
 	for (let i = 0; i < imagesWrapers.length; i++) {
 		wrapers.push(imagesWrapers[i])
@@ -105,6 +105,7 @@ function galleryModal () {
 		const imageContainer = document.querySelector('.image');
 		const bodyHeight = body.clientHeight;
 		let imageHeight = 0;
+		let x = event.clientY;
 
 		let image = this.children[0];
 		modalImg.src = image.src;
@@ -128,9 +129,11 @@ function galleryModal () {
 
 		modalImg.onload = function() {
 		imageHeight = modalImg.height;
-		imageBg.style.transform = 'translate(-50%, 0px)';
-		imageBg.style.webkitTransform = 'translate(-50%, 0px)';
-
+		if (!query.matches) {
+			x = e.pageY - e.clientY;
+			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+		}
 		imageBg.style.transition = 'none';
 		imageBg.style.WebkitTransition = 'none';
 		imageBg.style.MozTransition = 'none';
