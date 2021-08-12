@@ -20,15 +20,15 @@
       }
 
       .cls-3 {
-        fill: url(#Новый_образец_градиентной_залив);
+        fill: url(#Новый_образец_градиентной_зал_3);
       }
 
       .cls-4 {
-        fill: url(#Новый_образец_градиентной_залив-2);
+        fill: url(#Новый_образец_градиентной_зал_3-2);
       }
 
       .cls-5 {
-        fill: url(#Новый_образец_градиентной_залив-3);
+        fill: url(#Новый_образец_градиентной_зал_3-3);
       }
 
       .cls-6 {
@@ -37,15 +37,16 @@
         letter-spacing: -0.06em;
       }
     </style>
-    <linearGradient id="Новый_образец_градиентной_залив" data-name="Новый образец градиентной залив" x1="1.83" y1="35.47" x2="52.27" y2="35.47" gradientUnits="userSpaceOnUse">
+    <linearGradient id="Новый_образец_градиентной_зал_3" data-name="Новый образец градиентной зал 3" x1="88.13" y1="88.58" x2="13.8" y2="25.25" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00e6e9"/>
-      <stop offset="0.24" stop-color="#38ccf7"/>
-      <stop offset="0.36" stop-color="#55beff"/>
-      <stop offset="0.71" stop-color="#ffb294"/>
+      <stop offset="0.16" stop-color="#38c1f3"/>
+      <stop offset="0.36" stop-color="#7f92ff"/>
+      <stop offset="0.55" stop-color="#f894ff"/>
+      <stop offset="0.84" stop-color="#ffb894"/>
       <stop offset="1" stop-color="#e9bd00"/>
     </linearGradient>
-    <linearGradient id="Новый_образец_градиентной_залив-2" x1="24.48" y1="99.06" x2="52.23" y2="57.94" xlink:href="#Новый_образец_градиентной_залив"/>
-    <linearGradient id="Новый_образец_градиентной_залив-3" x1="30.22" y1="102.93" x2="57.97" y2="61.81" xlink:href="#Новый_образец_градиентной_залив"/>
+    <linearGradient id="Новый_образец_градиентной_зал_3-2" x1="76.43" y1="102.32" x2="2.09" y2="38.99" xlink:href="#Новый_образец_градиентной_зал_3"/>
+    <linearGradient id="Новый_образец_градиентной_зал_3-3" x1="69.26" y1="110.73" x2="-5.08" y2="47.4" xlink:href="#Новый_образец_градиентной_зал_3"/>
   </defs>
   <title>Монтажная область 2</title>
   <g id="Слой_5" data-name="Слой 5">
