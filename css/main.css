@@ -827,7 +827,20 @@ section {
 
 .link_to_representation a {
 	color: #000;
-  vertical-align: middle;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+	.link_to_representation {
+	opacity: 1.0;
+	filter: drop-shadow(-3px 3px 4px #fff);
+	-webkit-filter: drop-shadow(-3px 3px 4px #fff);
+	-moz-filter: drop-shadow(-3px 3px 4px #fff);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	-moz-backdrop-filter: none;
+	line-height: 1.2em;
+	}
 }
 
 
