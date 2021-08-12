@@ -2537,8 +2537,9 @@ footer a {
 	border-radius: 10px;
 	background: #fff;
 	content: 'Resume eng';
-	font-family: Crimson Text regular;
-	font-size: 2em;
+	font-family: De Valencia;
+	font-size: 1.8em;
+	letter-spacing: -1.5px;
 	color: #000;
 	position: absolute;
 	left: 50%;
@@ -2555,8 +2556,9 @@ footer a {
 	border-radius: 10px;
 	background: #fff;
 	content: 'Resume ru';
-	font-family: Crimson Text regular;
-	font-size: 2em;
+	font-family: De Valencia;
+	font-size: 1.8em;
+	letter-spacing: -1.5px;
 	color: #000;
 	position: absolute;
 	left: 50%;
@@ -2574,8 +2576,9 @@ footer a {
 	border-radius: 10px;
 	background: #fff;
 	content: 'Resume ua';
-	font-family: Crimson Text regular;
-	font-size: 2em;
+	font-family: De Valencia;
+	font-size: 1.8em;
+	letter-spacing: -1.5px;
 	color: #000;
 	position: absolute;
 	left: 50%;
@@ -2593,8 +2596,9 @@ footer a {
 	border-radius: 10px;
 	background: #fff;
 	content: 'Recomendation';
-	font-family: Crimson Text regular;
-	font-size: 2em;
+	font-family: De Valencia;
+	font-size: 1.8em;
+	letter-spacing: -1.5px;
 	color: #000;
 	position: absolute;
 	left: 50%;
