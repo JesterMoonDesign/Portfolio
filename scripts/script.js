@@ -155,7 +155,7 @@ function sliderClearTimeout () {
 	clearInterval(sliderSetTimeout);
 	sliderSetTimeout = setInterval(nextSlide, 2500);
 }
-//										СЛАДЙЕР BEEFORE/AFTER									
+//										СЛАЙДЕР BEEFORE/AFTER									
 const gallery = document.querySelector('.gallery'),
 		galleryWidth = getComputedStyle(gallery),
 		galleryResize = document.querySelector('.gallery_resize'),
@@ -194,7 +194,7 @@ function sliderBeeforeAfterPC () {
 //													Сладйер BEEFORE/AFTER для смартфона					
 sliderBeeforeAfterMobile();
 function sliderBeeforeAfterMobile () {
-	sliderSwitch.addEventListener('touchstart', sliderWork);
+	sliderSwitch.addEventListener('touchstart', sliderWork, {passive: true});
 	function sliderWork () {
 		function onDrag(event) {
 		sliderSwitchImg.style.pointerEvents = "none";
@@ -296,3 +296,133 @@ function copyText() {
 	}
 }
 
+
+
+									//Анимации
+function page1H1Anim () {
+
+	function timeout () {
+		aniScrollX = 0;
+		pageAnimation_1 ();
+	}
+
+	let h1Letters = document.querySelectorAll('.h1_letters_animation span');
+	let h2Letters = document.querySelectorAll('.h2_letters_animation span');
+	let topCommet = document.querySelector('.top-commet');
+	let bottomCommet = document.querySelector('.bottom-commet');
+	let aniScrollX = 0;
+
+	function pageAnimation_1 () {
+		aniScrollX = window.pageYOffset
+		h1Letters[0].classList.add('active');
+		h1Letters[0].style.transform = "translate(" + aniScrollX + 'px,' + aniScrollX + 'px)';
+		h1Letters[1].classList.add('active');
+		h1Letters[1].style.transform = "translate(" + aniScrollX * 1.6 + 'px,' + aniScrollX * 2.066 + 'px)';
+		h1Letters[2].classList.add('active');
+		h1Letters[2].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX + 'px)';
+		h1Letters[3].classList.add('active');
+		h1Letters[3].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 2.5 + 'px)';
+		h1Letters[4].classList.add('active');
+		h1Letters[4].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.66 + 'px)';
+		h1Letters[5].classList.add('active');
+		h1Letters[5].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.6 + 'px)';
+		h1Letters[6].classList.add('active');
+		h1Letters[6].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX * -1.24 + 'px)';
+		h1Letters[7].classList.add('active');
+		h1Letters[7].style.transform = "translate(" + aniScrollX * -1.57 + 'px,' + aniScrollX * 1.66 + 'px)';
+		h1Letters[8].classList.add('active');
+		h1Letters[8].style.transform = "translate(" + aniScrollX * -1.86 + 'px,' + aniScrollX * 1.33 + 'px)';
+		h1Letters[9].classList.add('active');
+		h1Letters[9].style.transform = "translate(" + aniScrollX * -2.33 + 'px,' + aniScrollX * -1.66 + 'px)';
+
+		h2Letters[0].classList.add('active');
+		h2Letters[0].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.1 + 'px)';
+		h2Letters[1].classList.add('active');
+		h2Letters[1].style.transform = "translate(" + aniScrollX * 1.2 + 'px,' + aniScrollX * 1.18 + 'px)';
+		h2Letters[2].classList.add('active');
+		h2Letters[2].style.transform = "translate(" + aniScrollX * -1.3 + 'px,' + aniScrollX * -1.2+ 'px)';
+		h2Letters[3].classList.add('active');
+		h2Letters[3].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.76 + 'px)';
+		h2Letters[4].classList.add('active');
+		h2Letters[4].style.transform = "translate(" + aniScrollX * 1.3 + 'px,' + aniScrollX * -1.1 + 'px)';
+		h2Letters[5].classList.add('active');
+		h2Letters[5].style.transform = "translate(" + aniScrollX * -1.13 + 'px,' + aniScrollX * -1.56 + 'px)';
+
+		document.querySelector('.top_commet_div').classList.add("active");
+		document.querySelector('.bottom_commet_div').classList.add("active");
+		topCommet.style.transform = "translate(" + aniScrollX * 3 + 'px,' + aniScrollX * -1 + 'px)' + 'rotate(' + aniScrollX * -0.09 + 'deg)';
+		bottomCommet.style.transform = "translate(" + aniScrollX * -3 + 'px,' + aniScrollX * 1 + 'px)' + 'rotate(' + aniScrollX * -0.19 + 'deg)';
+	}
+	window.onscroll = setInterval(timeout (), 20000)
+}
+
+function page1H1AnimMobile () {
+
+	function timeout () {
+		aniScrollX = 0;
+		pageAnimation_Mobile ();
+	}
+
+	let h1Letters = document.querySelectorAll('.mobile-header_ span');
+	let commet = document.querySelector('.mobile_main_page_graphic_img');
+	let aniScrollX = 0;
+
+	function pageAnimation_Mobile () {
+		aniScrollX = window.pageYOffset;
+		let x = 0;
+
+		commet.classList.add('active');
+		if (aniScrollX<=1) {
+			x=90
+		} else {
+			x=90 + (aniScrollX * 0.05)
+		}
+		commet.style.transform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
+		
+		h1Letters[0].classList.add('active');
+		h1Letters[0].style.transform = "translate(" + aniScrollX * 1 + 'px,' + aniScrollX * 1 + 'px)';
+		h1Letters[1].classList.add('active');
+		h1Letters[1].style.transform = "translate(" + aniScrollX * -3.53 + 'px,' + aniScrollX * 1.69 + 'px)';
+		h1Letters[2].classList.add('active');
+		h1Letters[2].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.6 + 'px)';
+		h1Letters[3].classList.add('active');
+		h1Letters[3].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * -3.91 + 'px)';
+		h1Letters[4].classList.add('active');
+		h1Letters[4].style.transform = "translate(" + aniScrollX * -0.45 + 'px,' + aniScrollX * 0.52 + 'px)';
+		h1Letters[5].classList.add('active');
+		h1Letters[5].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -2.17 + 'px)';
+		h1Letters[6].classList.add('active');
+		h1Letters[6].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.17 + 'px)';
+		h1Letters[7].classList.add('active');
+		h1Letters[7].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * 3.91 + 'px)';
+		h1Letters[8].classList.add('active');
+		h1Letters[8].style.transform = "translate(" + aniScrollX * -2 + 'px,' + aniScrollX * -2.17 + 'px)';
+		h1Letters[9].classList.add('active');
+		h1Letters[9].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.3 + 'px)';
+		h1Letters[10].classList.add('active');
+		h1Letters[10].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -1.52 + 'px)';
+		h1Letters[11].classList.add('active');
+		h1Letters[11].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * 2.17 + 'px)';
+		h1Letters[12].classList.add('active');
+		h1Letters[12].style.transform = "translate(" + aniScrollX * 2.66 + 'px,' + aniScrollX * -2.17 + 'px)';
+		h1Letters[13].classList.add('active');
+		h1Letters[13].style.transform = "translate(" + aniScrollX * 2.2 + 'px,' + aniScrollX * -1.74 + 'px)';
+		h1Letters[14].classList.add('active');
+		h1Letters[14].style.transform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
+		h1Letters[15].classList.add('active');
+		h1Letters[15].style.transform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
+
+		console.log(window.pageYOffset)
+	}
+
+	window.onscroll = setInterval(timeout (), 20000)
+}
+
+
+if (isMobile.any()) {
+	window.addEventListener('scroll', page1H1AnimMobile);
+
+} else {
+	window.addEventListener('scroll', page1H1Anim);
+}
+	
