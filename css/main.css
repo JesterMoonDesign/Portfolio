@@ -475,10 +475,10 @@ section {
 .H1_animation_1 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_1 0.3s linear 1.2s forwards;
+	animation: H1_animation_1 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_1.active {
-	animation: H1_animation_1 0.3s linear 1.2s;
+	animation: H1_animation_1 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -491,10 +491,10 @@ section {
 .H1_animation_2 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_2 0.3s linear 1.2s forwards;
+	animation: H1_animation_2 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_2.active {
-	animation: H1_animation_2 0.3s linear 1.2s;
+	animation: H1_animation_2 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -507,10 +507,10 @@ section {
 .H1_animation_3 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_3 0.3s linear 1.2s forwards;
+	animation: H1_animation_3 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_3.active {
-	animation: H1_animation_3 0.3s linear 1.2s;
+	animation: H1_animation_3 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -523,10 +523,10 @@ section {
 .H1_animation_4 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_4 0.3s linear 1.2s forwards;
+	animation: H1_animation_4 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_4.active {
-	animation: H1_animation_4 0.3s linear 1.2s;
+	animation: H1_animation_4 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -539,10 +539,10 @@ section {
 .H1_animation_5 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_5 0.3s linear 1.2s forwards;
+	animation: H1_animation_5 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_5.active {
-	animation: H1_animation_5 0.3s linear 1.2s;
+	animation: H1_animation_5 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -555,10 +555,10 @@ section {
 .H1_animation_6 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_6 0.3s linear 1.2s forwards;
+	animation: H1_animation_6 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_6.active {
-	animation: H1_animation_6 0.3s linear 1.2s;
+	animation: H1_animation_6 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -571,10 +571,10 @@ section {
 .H1_animation_7 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_7 0.3s linear 1.2s forwards;
+	animation: H1_animation_7 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_7.active {
-	animation: H1_animation_7 0.3s linear 1.2s;
+	animation: H1_animation_7 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -587,10 +587,10 @@ section {
 .H1_animation_8 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_8 0.3s linear 1.2s forwards;
+	animation: H1_animation_8 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_8.active {
-	animation: H1_animation_8 0.3s linear 1.2s;
+	animation: H1_animation_8 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -603,10 +603,10 @@ section {
 .H1_animation_9 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_9 0.3s linear 1.2s forwards;
+	animation: H1_animation_9 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_9.active {
-	animation: H1_animation_9 0.3s linear 1.2s;
+	animation: H1_animation_9 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -619,10 +619,10 @@ section {
 .H1_animation_10 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H1_animation_10 0.3s linear 1.2s forwards;
+	animation: H1_animation_10 0.4s ease-in-out 1.2s forwards;
 }
 .H1_animation_10.active {
-	animation: H1_animation_10 0.3s linear 1.2s;
+	animation: H1_animation_10 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 	
@@ -636,10 +636,10 @@ section {
 .H2_animation_1 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_1 0.3s linear 1.2s forwards;
+	animation: H2_animation_1 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_1.active {
-	animation: H2_animation_1 0.3s linear 1.2s;
+	animation: H2_animation_1 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -651,10 +651,10 @@ section {
 .H2_animation_2 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_2 0.3s linear 1.2s forwards;
+	animation: H2_animation_2 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_2.active {
-	animation: H2_animation_2 0.3s linear 1.2s;
+	animation: H2_animation_2 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -666,10 +666,10 @@ section {
 .H2_animation_3 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_3 0.3s linear 1.2s forwards;
+	animation: H2_animation_3 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_3.active {
-	animation: H2_animation_3 0.3s linear 1.2s;
+	animation: H2_animation_3 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -681,10 +681,10 @@ section {
 .H2_animation_4 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_4 0.3s linear 1.2s forwards;
+	animation: H2_animation_4 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_4.active {
-	animation: H2_animation_4 0.3s linear 1.2s;
+	animation: H2_animation_4 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -696,10 +696,10 @@ section {
 .H2_animation_5 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_5 0.3s linear 1.2s forwards;
+	animation: H2_animation_5 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_5.active {
-	animation: H2_animation_5 0.3s linear 1.2s;
+	animation: H2_animation_5 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -711,10 +711,10 @@ section {
 .H2_animation_6 {
 	display: inline-block;
 	visibility: hidden;
-	animation: H2_animation_6 0.3s linear 1.2s forwards;
+	animation: H2_animation_6 0.4s ease-in-out 1.2s forwards;
 }
 .H2_animation_6.active {
-	animation: H2_animation_6 0.3s linear 1.2s;
+	animation: H2_animation_6 0.4s ease-in-out 1.2s;
 	transform: translate(0vw, 0vh);
 	visibility: visible;
 }
@@ -737,6 +737,20 @@ section {
 	font-family: De Valencia;
 	font-size: 1.563vw;
 	text-decoration: none;
+	animation: let_me_show_you 1.5s ease-in 5s infinite;
+}
+
+@keyframes let_me_show_you {
+	0% {transform: translate(0px, 0px);}
+	11.11% {transform: translate(0px, 0px);}
+	22.22% {transform: translate(0px, -10px);}
+	33.33% {transform: translate(0px, 0px);} 
+	44.44% {transform: translate(0px, -10px);}
+	55.55% {transform: translate(0px, 0px);}
+	66.66% {transform: translate(0px, 0px);} 
+	77.77% {transform: translate(0px, 0px);}
+	88.88% {transform: translate(0px, 0px);}
+	100% {transform: translate(0px, 0px);}
 }
 
 .hide-let-me-show {
@@ -790,12 +804,21 @@ section {
 	background: #000;
 	transition: all 0.5s ease;
 	overflow: hidden;
-	animation: page_2_ani 1s ease-in forwards;
+	animation: page_2_ani_revers 0.5s ease-in-out 0.1s forwards;
+}
+
+.page-2-content.active {
+	animation: page_2_ani 0.5s ease-in-out forwards;
 }
 
 @keyframes page_2_ani {
 	from {transform: translateX(-110%);} 
 	to {transform: translateX(0);}
+}
+
+@keyframes page_2_ani_revers {
+	from {transform: translateX(0%);} 
+	to {transform: translateX(-110%);}
 }
 
 @media (max-width: 769px) {
@@ -918,8 +941,8 @@ section {
 	}
 }
 
-.page-2-content .page-2-text-block a {
-	animation: link_blink 0.5s ease-in 2s;
+.page-2-content.active .page-2-text-block a {
+	animation: link_blink 0.5s ease-in 1s;
 }
 
 .page-2-text-block a:hover {
@@ -933,13 +956,21 @@ section {
 	width: 100%;
 	height: 100%;
 	background: #000;
-	animation: page_2_text_ani 1s linear 1s forwards;
+	animation: page_2_text_ani_reverse 0.2s ease-in-out 0s forwards;
+}
+
+@keyframes page_2_text_ani_reverse {
+	From {transform: translateY(100%);}
+	To {transform: translateY(0%);}
+}
+
+.page_2_ani_div.active {
+	animation: page_2_text_ani 0.2s ease-in-out 0.5s forwards;
 }
 
 @keyframes page_2_text_ani {
-	From {transform: translateY(0);}
+	From {transform: translateY(0%);}
 	To {transform: translateY(100%);}
-	
 }
 
 .main-page-section-3 {
@@ -952,28 +983,62 @@ section {
 }
 
 .page-3-block-1 {
+	position: relative;
 	width: 21.875%;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 }
 
-#page-3-ellipse-1 {
+.page-3-ellipse {
+	position: absolute;
+	left: 0;
+	top: 0;
 	width: 95.2380952381%;
 	margin-top: -23.8095238095%;
 	margin-left: 4.7619047619%;
 }
 
-#page-3-ellipse-2 {
-	width: 59.5238095238%;
-	margin-top: 9.52380952381%;
-	margin-left: -21.4285714286%;
+@keyframes page3-bubles1-ani {
+	0% {transform: translate(0%, 280%) scale(0); opacity: 1;}
+	20% {transform: translate(25%, 220%) scale(0.1); opacity: 1;}
+	40% {transform: translate(-25%, 160%) scale(0.3); opacity: 1;}
+	60% {transform: translate(65%, 90%) scale(0.6); opacity: 1;}
+	80% {transform: translate(-65%, 30%) scale(0.9); opacity: 1;}
+	100% {transform: translate(95%, -100%) scale(1.2); opacity: 1;}
 }
 
-#page-3-ellipse-3 {
-	width: 36.9047619048%;
-	margin-top: 13.0952380952%;
-	margin-left: 16.6666666667%;
+.page-3-ellipse.ellipse-1 {
+	opacity: 0;
+	animation: page3-bubles1-ani 6s linear 0s infinite;
+}
+
+@keyframes page3-bubles2-ani {
+	0% {transform: translate(0%, 280%) scale(0); opacity: 1;}
+	20% {transform: translate(-25%, 220%) scale(0.1);opacity: 1;}
+	40% {transform: translate(25%, 160%) scale(0.3); opacity: 1;}
+	60% {transform: translate(-65%, 90%) scale(0.6); opacity: 1;}
+	80% {transform: translate(65%, 30%) scale(0.9); opacity: 1;}
+	100% {transform: translate(-95%, -100%) scale(1.2); opacity: 1;}
+}
+
+.page-3-ellipse.ellipse-2 {
+	opacity: 0;
+	animation: page3-bubles2-ani 6s linear 2s infinite;
+}
+
+@keyframes page3-bubles3-ani {
+	0% {transform: translate(0%, 280%) scale(0); opacity: 1;}
+	20% {transform: translate(25%, 220%) scale(0.1); opacity: 1;}
+	40% {transform: translate(-25%, 160%) scale(0.3); opacity: 1;}
+	60% {transform: translate(65%, 90%) scale(0.6); opacity: 1;}
+	80% {transform: translate(-65%, 30%) scale(0.9); opacity: 1;}
+	100% {transform: translate(95%, -100%) scale(1.2); opacity: 0;}
+}
+
+.page-3-ellipse.ellipse-3 {
+	opacity: 0;
+	animation: page3-bubles3-ani 6s linear 4s infinite;
 }
 
 .page-3-block-2 {
@@ -995,7 +1060,7 @@ section {
 }
 
 .page_3_arrow {
-	max-width: 40%;
+	width: 33%;
 	margin-top: 0;
 }
 
@@ -1013,6 +1078,14 @@ section {
 	width: 153.571428571%;
 	margin-bottom: -90%;
 	margin-left: 9.7619047619%;
+	transform: scale(0) translate(9%, 29%) scale(1.5);
+	animation: page-3-ellipse-4-anim 4s ease-in-out 1s infinite;
+}
+
+@keyframes page-3-ellipse-4-anim {
+	0% {transform: translate(9%, 29%) scale(0); opacity: 0;}
+	50% {transform: translate(9%, 29%) scale(1.5); opacity: 1;}
+	100% {transform: translate(9%, 29%) scale(0);opacity: 0;}
 }
 
 @media (max-width: 500px) {
@@ -1210,6 +1283,7 @@ section {
 }
 
 .link_to_representation {
+	visibility: hidden;
 	text-align: center;
 	position: absolute;
 	font-family: De Valencia;

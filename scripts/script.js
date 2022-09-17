@@ -376,7 +376,7 @@ function page1H1AnimMobile () {
 			x=90
 		} else {
 			x=90 + (aniScrollX * 0.05)
-		}
+		};
 		commet.style.transform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
 		
 		h1Letters[0].classList.add('active');
@@ -411,13 +411,10 @@ function page1H1AnimMobile () {
 		h1Letters[14].style.transform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
 		h1Letters[15].classList.add('active');
 		h1Letters[15].style.transform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
-
-		console.log(window.pageYOffset)
 	}
 
-	window.onscroll = setInterval(timeout (), 20000)
+	window.onscroll 
 }
-
 
 if (isMobile.any()) {
 	window.addEventListener('scroll', page1H1AnimMobile);
@@ -425,4 +422,35 @@ if (isMobile.any()) {
 } else {
 	window.addEventListener('scroll', page1H1Anim);
 }
+
+function page2BlockAnimation () {
+	let page2Block = document.querySelector('.page-2-content');
+	let cover = document.querySelector('.page_2_ani_div');
+	let monitorHeight = document.documentElement.clientHeight;
+ 	let x = 0;
+	let index = 0;
 	
+	if (window.pageYOffset < (monitorHeight * 2)){
+		window.onscroll = setInterval ((function page2BlockAnim () {
+			if (window.pageYOffset >= (monitorHeight * 1.5) && x==0) {
+				index = 0;
+			}
+			if (x==0 && window.pageYOffset < 5 || x==0 && window.pageYOffset >= (monitorHeight * 1.5) && index != 0 || x==0 && window.pageYOffset <= (monitorHeight * 1.6) && index==0){
+				x=1;
+				index = 0;
+			}
+			if (x==1 && window.pageYOffset >= (monitorHeight * 0.5) || x==1 && (monitorHeight * 0.5) > window.pageYOffset > (monitorHeight * 1.5)){
+				index = 1;
+				x=0;
+			}
+			if (index == 0) {
+				page2Block.classList.remove('active');
+				cover.classList.remove('active');
+			} 
+			if (index == 1) {
+				page2Block.classList.add('active');
+				cover.classList.add('active');
+			}
+		}), 100)
+	}
+} page2BlockAnimation ();
