@@ -1033,7 +1033,7 @@ section {
 	40% {transform: translate(-25%, 160%) scale(0.3); opacity: 1;}
 	60% {transform: translate(65%, 90%) scale(0.6); opacity: 1;}
 	80% {transform: translate(-65%, 30%) scale(0.9); opacity: 1;}
-	100% {transform: translate(95%, -100%) scale(1.2); opacity: 0;}
+	100% {transform: translate(95%, -120%) scale(1.2); opacity: 0;}
 }
 
 .page-3-ellipse.ellipse-3 {
@@ -1083,9 +1083,9 @@ section {
 }
 
 @keyframes page-3-ellipse-4-anim {
-	0% {transform: translate(9%, 29%) scale(0); opacity: 0;}
+	0% {transform: translate(9%, 29%) scale(0); opacity: 1;}
 	50% {transform: translate(9%, 29%) scale(1.5); opacity: 1;}
-	100% {transform: translate(9%, 29%) scale(0);opacity: 0;}
+	100% {transform: translate(9%, 29%) scale(0);opacity: 1;}
 }
 
 @media (max-width: 500px) {
@@ -1495,12 +1495,30 @@ cursor: pointer;
 	transition: 0.01s;
 }
 
+.gallery::after {
+	content: 'AFTER';
+	font-family: De Valencia;
+	font-size: 3em;
+	letter-spacing: -0.2em;
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	z-index: 0;
+	top: 86%;
+	right: 1%;
+	width: auto;
+	height: auto;
+}
+
 .slider_switch_img {
+	position: relative;
+	z-index: 51;
 	width: 40px;
 	height: 100%;
 	object-fit: none;
 	object-position: center;
 	cursor: pointer;
+	z-index: 5;
 	transform: translateX(350px);
 	-webkit-transform: translateX(350px);
 	-moz-transform: translateX(3500px);
@@ -1628,17 +1646,50 @@ align-items: center;
 #page-6-circle-1 {
 	width: 3.125%;
 	margin-left: 5.72916666667%;
+	transform: translate(-265%, 545%) scale(3.3);
+	animation: page-6-circle-1 6s linear 2s infinite;
+}
+
+@keyframes page-6-circle-1 {
+	0% {transform: translate(-265%, 545%) scale(3.3); opacity: 1;}
+	25% {transform: translate(-345%, 140%) scale(2.7); opacity: 1;}
+	50% {transform: translate(55%, -58%) scale(2); opacity: 1;}
+	75% {transform: translate(-205%, -258%) scale(1.4); opacity: 1;}
+	100% {transform: translate(-55%, -358%) scale(0); opacity: 1;}
+	
 }
 
 #page-6-circle-2 {
 	width: 5.20833333333%;
 	margin-top: 1.82291666667%;
 	margin-left: 5.72916666667%;
+	transform: translate(-180%, 210%) scale(2);
+	animation: page-6-circle-2 6s linear 0s infinite;
+}
+
+@keyframes page-6-circle-2 {
+	0% {transform: translate(-180%, 210%) scale(2); opacity: 1;}
+	25% {transform: translate(10%, -41%) scale(1.6); opacity: 1;}
+	50% {transform: translate(-130%, -150%) scale(1.2); opacity: 1;}
+	75% {transform: translate(-20%, -270%) scale(0.8); opacity: 1;}
+	100% {transform: translate(-150%, -330%) scale(0); opacity: 1;}
+	
 }
 
 #page-6-circle-3 {
 	width: 10.4166666667%;
 	margin-left: -3.125%;
+	transform: translate(-30%, 30%);
+	animation: page-6-circle-3 6s linear 04s infinite;
+}
+
+@keyframes page-6-circle-3 {
+	0% {transform: translate(-30%, 30%) scale(1);}
+	25% {transform: translate(65%, -95%) scale(0.8); opacity: 1;}
+	50% {transform: translate(-5%, -150%) scale(0.6); opacity: 1;}
+	75% {transform: translate(50%, -200%) scale(0.3); opacity: 1;}
+	100% {transform: translate(-15%, -252%) scale(0); opacity: 1;}
+	
 }
 
 .page-6-bg {
@@ -1840,17 +1891,51 @@ align-items: center;
 #page-7-ellipse-1 {
 	width: 3.64583333333%;
 	margin-left: 3.125%;
+	transform: translate(-80%, 580%) scale(0);
+	animation: page-7-ellipse-1 6s linear 0s infinite;
 }
+
+@keyframes page-7-ellipse-1 {
+	0% {transform: translate(-80%, 580%) scale(3);}
+	20% {transform: translate(128%, 182%) scale(1.4);}
+	40% {transform: translate(0%, 0%) scale(1);}
+	60% {transform: translate(180%, -160%) scale(0.5);}
+	80% {transform: translate(60%, -280%) scale(0);}
+	100% {transform: translate(5%, 430%) scale(0);}
+}
+
 #page-7-ellipse-2 {
 	width: 5.20833333333%;
 	margin-top: 2.1875%;
 	margin-left: 7.00520833333%;
+	transform: translate(0%, 0%) scale(0);
+	animation: page-7-ellipse-2 6s linear 2s infinite;
+}
+
+@keyframes page-7-ellipse-2 {
+	0% {transform: translate(-100%, 270%) scale(2);}
+	20% {transform: translate(-160%, -30%) scale(1);}
+	40% {transform: translate(80%, -200%) scale(0.7);}
+	60% {transform: translate(-45%, -265%) scale(0.3);}
+	80% {transform: translate(92%, -413%) scale(0);}
+	100% {transform: translate(-100%, 270%) scale(0);}	
 }
 
 #page-7-ellipse-3 {
 	width: 10.4166666667%;
 	margin-top: 1%;
 	margin-left: 0.18229166666%;
+	transform: translate(-30%, 60%) scale(0);
+	animation: page-7-ellipse-3 6s linear 4s infinite;
+}
+
+@keyframes page-7-ellipse-3 {
+	0% {transform: translate(-30%, 60%) scale(1);}
+	20% {transform: translate(75%, -110%) scale(0.5);}
+	40% {transform: translate(15%, -190%) scale(0.3);}
+	60% {transform: translate(75%, -230%) scale(0.2);}
+	80% {transform: translate(25%, -270%) scale(0);}
+	100% {transform: translate(-30%, 60%) scale(0);}
 }
 
 @media (max-width: 1423px) {
@@ -2042,7 +2127,7 @@ align-items: center;
 
 .sm-facebook {
 	width: 4.58333333333%;
-	margin: 7.60416666667% 1.5625% 0 1.5625%;
+	margin: 3.604167% 1.5625% 0 1.5625%;
 }
 .sm-telegram {
 	width: 9.89583333333%;
