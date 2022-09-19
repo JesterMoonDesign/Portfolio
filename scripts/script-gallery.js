@@ -165,3 +165,27 @@ function galleryModal () {
 	};
 
 }; galleryModal ();
+
+// function gallleryCursor () {
+// 	let imageWrapers = document.querySelectorAll('.image__wraper');
+// 	let page = document.querySelector('.gallery__body');
+// 	let cursor = document.querySelector('.cursor');
+// 	let x = 0;
+// 	let y = 0;
+		
+// 	imageWrapers.forEach(wraper => {
+// 		wraper.onpointerenter = function (){
+// 			cursor.style.visibility = ('visible');
+
+// 			page.onpointermove = function (event){
+// 				x = event.clientX;
+// 				y = event.clientY;
+// 				cursor.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+// 			};
+
+// 			page.onpointerleave = function (){
+// 				cursor.style.visibility = ('hidden');
+// 			};
+// 		};
+// 	});
+// } gallleryCursor ();

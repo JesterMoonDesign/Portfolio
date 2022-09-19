@@ -249,7 +249,7 @@ function activeCheck () {
 		contactsPageScroll();
 	} else { 
 		mailToggleActive();
-		setTimeout(() => contactsPageScroll(), 300);
+		setTimeout(() => contactsPageScroll(), 400);
 	}
 }
 
@@ -274,6 +274,8 @@ function activeContacts () {
 	}
 }
 
+let menuContactsBtn = document.querySelector('#a-global-about')
+menuContactsBtn.addEventListener('click', activeCheck);
 activeContacts ();
 
 										//КОПИРОВАНИЕ ЕМАЙЛА																
