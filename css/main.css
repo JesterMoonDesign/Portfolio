@@ -179,11 +179,11 @@ section {
 	animation: menu_anim1 0.6s ease-in-out 0s;
 }
 
-.a-global-contacts {
+.a-global-contacts2 {
 	animation: menu_anim4 0.8s ease-in-out 0s;
 }
-#a-global-contacts {
-	animation: menu_anim1 0.8s ease-in-out 0s;
+#a-global-contacts2 {
+	animation: menu_anim1 0.9s ease-in-out 0s;
 }
 
 #a-global-home:hover{
@@ -202,7 +202,7 @@ section {
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
-#a-global-contacts:hover{
+#2:hover{
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
@@ -2265,6 +2265,16 @@ align-items: center;
 	padding-left: 20px;
 }
 
+.fotter-menu-marker {
+	width: 11%;
+}
+
+@media screen and (max-width: 600px) {
+	.fotter-menu-marker {
+		width: 13%;
+	}
+}
+
 .footer-menu p {
 	font-size: 2.8em;
 	font-family: Crimson Text;
@@ -2500,8 +2510,8 @@ footer a {
 }
 
 @keyframes mobile-main-page-graphic-ani {
-	from {transform: translate(-70vw, -70vh) rotate(40deg); visibility: hidden;}
-	to {transform: translate(0vw, 0vh) rotate(90deg); visibility: visible;}
+	from {transform: translate(-70vw, -70vh) rotate(40deg); -webkit-transform: translate(-70vw, -70vh) rotate(40deg); -moz-transform: translate(-70vw, -70vh) rotate(40deg); visibility: hidden;}
+	to {transform: translate(0vw, 0vh) rotate(90deg); -webkit-transform: translate(0vw, 0vh) rotate(90deg); -moz-transform: translate(0vw, 0vh) rotate(90deg); visibility: visible;}
 }
 
 .mobile_main_page_graphic_img {
@@ -2515,6 +2525,8 @@ footer a {
 .mobile_main_page_graphic_img {
 	animation: mobile-main-page-graphic-ani 0.5s linear 0s;
 	transform: translate(0vw, 0vh) rotate(90deg);
+	-webkit-transform: translate(0vw, 0vh) rotate(90deg);
+	-moz-transform: translate(0vw, 0vh) rotate(90deg);
 }
 
 
@@ -2559,6 +2571,8 @@ text-align: right;
 		margin: -6.4% auto 0 auto;
 		padding-top: 0;
 		transform: scale(0.78);
+		-webkit-transform: scale(0.78);
+		-moz-transform: scale(0.78);
 	}
 	.mobile-main-page-header p {
 		font-size: 15vw;
@@ -2582,10 +2596,12 @@ text-align: right;
 .h1_mobile_animation_1.active {
 	animation: h1_mobile_anim_2 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_1 {
-	from {transform: translate(-15vw, -23vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-15vw, -23vh); -webkit-transform: translate(-15vw, -23vh); -moz-transform: translate(-15vw, -23vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_2 {
@@ -2595,10 +2611,12 @@ text-align: right;
 .h1_mobile_animation_2.active {
 	animation: h1_mobile_anim_2 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_2 {
-	from {transform: translate(-53vw, 39vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-53vw, 39vh); -webkit-transform: translate(-53vw, 39vh); -moz-transform: translate(-53vw, 39vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_3 {
@@ -2608,10 +2626,12 @@ text-align: right;
 .h1_mobile_animation_3.active {
 	animation: h1_mobile_anim_3 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_3 {
-	from {transform: translate(-60vw, 60vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-60vw, 60vh); -webkit-transform: translate(-60vw, 60vh); -moz-transform: translate(-60vw, 60vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_4 {
@@ -2621,10 +2641,12 @@ text-align: right;
 .h1_mobile_animation_4.active {
 	animation: h1_mobile_anim_4 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_4 {
-	from {transform: translate(-30vw, 90vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-30vw, 90vh); -webkit-transform: translate(-30vw, 90vh); -moz-transform: translate(-30vw, 90vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_5 {
@@ -2634,10 +2656,12 @@ text-align: right;
 .h1_mobile_animation_5.active {
 	animation: h1_mobile_anim_5 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_5 {
-	from {transform: translate(33vw, 12vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(33vw, 12vh); -webkit-transform: translate(33vw, 12vh); -moz-transform: translate(33vw, 12vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_6 {
@@ -2647,10 +2671,12 @@ text-align: right;
 .h1_mobile_animation_6.active {
 	animation: h1_mobile_anim_6 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-form: translate(0vw, 0vh);
+	-moz-form: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_6 {
-	from {transform: translate(-90vw, 50vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-90vw, 50vh); -webkit-transform: translate(-90vw, 50vh); -moz-transform: translate(-90vw, 50vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_7 {
@@ -2660,10 +2686,12 @@ text-align: right;
 .h1_mobile_animation_7.active {
 	animation: h1_mobile_anim_7 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_7 {
-	from {transform: translate(-60vw, 50vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-60vw, 50vh); -webkit-transform: translate(-60vw, 50vh); -moz-transform: translate(-60vw, 50vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_8 {
@@ -2673,10 +2701,12 @@ text-align: right;
 .h1_mobile_animation_8.active {
 	animation: h1_mobile_anim_8 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_8 {
-	from {transform: translate(-30vw, -90vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-30vw, -90vh); -webkit-transform: translate(-30vw, -90vh); -moz-transform: translate(-30vw, -90vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_9 {
@@ -2686,10 +2716,12 @@ text-align: right;
 .h1_mobile_animation_9.active {
 	animation: h1_mobile_anim_9 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_9 {
-	from {transform: translate(30vw, 50vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(30vw, 50vh); -webkit-transform: translate(30vw, 50vh); -moz-transform: translate(30vw, 50vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_10 {
@@ -2699,10 +2731,12 @@ text-align: right;
 .h1_mobile_animation_10.active {
 	animation: h1_mobile_anim_10 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_10 {
-	from {transform: translate(20vw, -10vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(20vw, -10vh); -webkit-transform: translate(20vw, -10vh); -moz-transform: translate(20vw, -10vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_11 {
@@ -2712,10 +2746,12 @@ text-align: right;
 .h1_mobile_animation_11.active {
 	animation: h1_mobile_anim_11 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_11 {
-	from {transform: translate(-90vw, 35vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-90vw, 35vh); -webkit-transform: translate(-90vw, 35vh); -moz-transform: translate(-90vw, 35vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_12 {
@@ -2725,10 +2761,12 @@ text-align: right;
 .h1_mobile_animation_12.active {
 	animation: h1_mobile_anim_12 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_12 {
-	from {transform: translate(-90vw, -50vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-90vw, -50vh); -webkit-transform: translate(-90vw, -50vh); -moz-transform: translate(-90vw, -50vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_13 {
@@ -2738,10 +2776,12 @@ text-align: right;
 .h1_mobile_animation_13.active {
 	animation: h1_mobile_anim_13 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_13 {
-	from {transform: translate(-40vw, 50vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-40vw, 50vh); -webkit-transform: translate(-40vw, 50vh); -moz-transform: translate(-40vw, 50vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_14 {
@@ -2751,10 +2791,12 @@ text-align: right;
 .h1_mobile_animation_14.active {
 	animation: h1_mobile_anim_14 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_14 {
-	from {transform: translate(-33vw, 40vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-33vw, 40vh); -webkit-transform: translate(-33vw, 40vh); -moz-transform: translate(-33vw, 40vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_15 {
@@ -2764,10 +2806,12 @@ text-align: right;
 .h1_mobile_animation_15.active {
 	animation: h1_mobile_anim_15 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_15 {
-	from {transform: translate(-10vw, 30vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(-10vw, 30vh); -webkit-transform: translate(-10vw, 30vh); -moz-transform: translate(-10vw, 30vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 .h1_mobile_animation_16 {
@@ -2777,10 +2821,12 @@ text-align: right;
 .h1_mobile_animation_16.active {
 	animation: h1_mobile_anim_16 0s ease-in 0s;
 	transform: translate(0vw, 0vh);
+	-webkit-transform: translate(0vw, 0vh);
+	-moz-transform: translate(0vw, 0vh);
 }
 @keyframes h1_mobile_anim_16 {
-	from {transform: translate(16vw, 20vh);}
-	to {transform: translate(0vw, 0vh);}
+	from {transform: translate(16vw, 20vh); -webkit-transform: translate(16vw, 20vh); -moz-transform: translate(16vw, 20vh);}
+	to {transform: translate(0vw, 0vh); -webkit-transform: translate(0vw, 0vh); -moz-transform: translate(0vw, 0vh);}
 }
 
 /*						страница галерея/Gallery										*/
@@ -2900,6 +2946,8 @@ text-align: right;
 
 .page-nav:hover {
 	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
 }
 
 .gallery-h1 {
@@ -3257,6 +3305,8 @@ object-fit: cover;
 	left: 0;
 	top: 0;
 	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
 }
 
 #about-nav-back img:nth-child(2) {
