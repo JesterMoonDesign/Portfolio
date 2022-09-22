@@ -105,7 +105,7 @@ function galleryModal () {
 		const imageContainer = document.querySelector('.image');
 		const bodyHeight = body.clientHeight;
 		let imageHeight = 0;
-		let x = event.clientY;
+		let x = 0;
 
 		let image = this.children[0];
 		modalImg.src = image.src;
@@ -115,13 +115,15 @@ function galleryModal () {
 
 			if (query.matches) {
 				if (x <= imageHeight - (bodyHeight - 200)) { //!!!!!
-					imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
-					imageBg.style.webkitTransform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
+					imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+					imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+					imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)'
 				} else {};
 			} else {
 					if (x <= (bodyHeight - x - 100)) { //!!!!!
-						imageBg.style.transform = 'translate(-50%,' + event.target.scrollingElement.scrollTop + 'px)';
+						imageBg.style.transform = 'translate(-50%,' + x + 'px)';
 						imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+						imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)';
 					}
 			}
 		};
@@ -133,10 +135,12 @@ function galleryModal () {
 			x = e.pageY - e.clientY;
 			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
 			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+			imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)';
 		}
 		imageBg.style.transition = 'none';
 		imageBg.style.WebkitTransition = 'none';
 		imageBg.style.MozTransition = 'none';
+		imageBg.style.oTransition = 'none';
 
 			if (query.matches) {
 				if (imageHeight > (bodyHeight -200)) { //!!!!!
@@ -154,10 +158,11 @@ function galleryModal () {
 		function closeModal () {
 			imageBg.style.transform = 'translate(-50%, 0px)';
 			imageBg.style.webkitTransform = 'translate(-50%, 0px)';
+			imageBg.style.oTransform = 'translate(-50%, 0px)';
 			window.removeEventListener('scroll', moveModal);
 			modal.style.transition = 'all linear 0.2s';
-			modal.style.WebkitTransition = 'all linear 0.2s';
-			modal.style.MozTransition = 'all linear 0.2s';
+			modal.style.webkitTransition = 'all linear 0.2s';
+			modal.style.mozTransition = 'all linear 0.2s';
 			modal.classList.remove('active');
 			modal.removeEventListener('click', closeModal);
 		};

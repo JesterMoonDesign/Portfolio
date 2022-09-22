@@ -44,6 +44,18 @@ function scrollUnlock() {
 	});
 })();
 
+function hideBurgerMenu () {
+	let burgerMenuBtns = document.querySelectorAll('.burger-list a');
+	burgerMenuBtns.forEach(btn => {
+		btn.onclick = function (){
+			if (document.querySelector('.burger-list').classList.contains('active')) {
+				console.log('xiy');
+				document.querySelector('.burger-list').classList.remove('active');
+			}
+		}
+	});
+}hideBurgerMenu();
+
 //														ПРОКРУТКА НАВЕРХ										
 (function() {
 const btnToTop = document.querySelector('.arrow-to-up');
@@ -167,7 +179,9 @@ function galleryAdaptive () {
 		sliderSwitchImg.style.transform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)",
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)",
 		sliderSwitchImg.style.MozTransform = "translateX(" + (parseInt(galleryWidth.width) / 2) + "px)";
-		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
+		galleryResize.style.clip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)",
+		galleryResize.style.webkitClip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)",
+		galleryResize.style.mozClip = "rect(auto," + ((parseInt(galleryWidth.width) / 2) + 20) + "px,auto,auto)";
 }
 galleryAdaptive ();
 //													Слайдер BEEFORE/AFTER для пк						
@@ -179,7 +193,9 @@ function sliderBeeforeAfterPC () {
 		sliderSwitchImg.style.transform = "translateX(" + x + 'px)' ,
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)' ,
 		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
-		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
+		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)",
+		galleryResize.style.webkitClip = "rect(auto," + (x + 20) + "px,auto,auto)",
+		galleryResize.style.mozClip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		}
 		document.body.addEventListener('pointermove', onDrag);
 		function pointerLose() {
@@ -203,6 +219,8 @@ function sliderBeeforeAfterMobile () {
 		sliderSwitchImg.style.WebkitTransform = "translateX(" + x + 'px)',
 		sliderSwitchImg.style.MozTransform = "translateX(" + x + 'px)';
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
+		galleryResize.style.webkitClip = "rect(auto," + (x + 20) + "px,auto,auto)";
+		galleryResize.style.mozClip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		}
 		scrollLoc();
 		document.body.addEventListener('touchmove', onDrag);
@@ -308,52 +326,84 @@ function page1H1Anim () {
 		pageAnimation_1 ();
 	}
 
-	let h1Letters = document.querySelectorAll('.h1_letters_animation span');
-	let h2Letters = document.querySelectorAll('.h2_letters_animation span');
-	let topCommet = document.querySelector('.top-commet');
-	let bottomCommet = document.querySelector('.bottom-commet');
+	let h1Letters = document.querySelectorAll('.mobile-main-page-header span');
+	let mobileCommet = document.querySelector('.mobile_main_page_graphic_img');
 	let aniScrollX = 0;
 
 	function pageAnimation_1 () {
 		aniScrollX = window.pageYOffset
-		h1Letters[0].classList.add('active');
-		h1Letters[0].style.transform = "translate(" + aniScrollX + 'px,' + aniScrollX + 'px)';
-		h1Letters[1].classList.add('active');
-		h1Letters[1].style.transform = "translate(" + aniScrollX * 1.6 + 'px,' + aniScrollX * 2.066 + 'px)';
-		h1Letters[2].classList.add('active');
-		h1Letters[2].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX + 'px)';
-		h1Letters[3].classList.add('active');
-		h1Letters[3].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 2.5 + 'px)';
-		h1Letters[4].classList.add('active');
-		h1Letters[4].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.66 + 'px)';
-		h1Letters[5].classList.add('active');
-		h1Letters[5].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.6 + 'px)';
-		h1Letters[6].classList.add('active');
-		h1Letters[6].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX * -1.24 + 'px)';
-		h1Letters[7].classList.add('active');
-		h1Letters[7].style.transform = "translate(" + aniScrollX * -1.57 + 'px,' + aniScrollX * 1.66 + 'px)';
-		h1Letters[8].classList.add('active');
-		h1Letters[8].style.transform = "translate(" + aniScrollX * -1.86 + 'px,' + aniScrollX * 1.33 + 'px)';
-		h1Letters[9].classList.add('active');
-		h1Letters[9].style.transform = "translate(" + aniScrollX * -2.33 + 'px,' + aniScrollX * -1.66 + 'px)';
+		if (aniScrollX <= (1.1 * document.documentElement.clientHeight)) {
+			h1Letters[0].classList.add('active');
+			h1Letters[0].style.transform = "translate(" + aniScrollX + 'px,' + aniScrollX + 'px)';
+			h1Letters[0].style.webkitTransform = "translate(" + aniScrollX + 'px,' + aniScrollX + 'px)';
+			h1Letters[0].style.mozTransform = "translate(" + aniScrollX + 'px,' + aniScrollX + 'px)';
+			h1Letters[1].classList.add('active');
+			h1Letters[1].style.transform = "translate(" + aniScrollX * 1.6 + 'px,' + aniScrollX * 2.066 + 'px)';
+			h1Letters[1].style.webkitTransform = "translate(" + aniScrollX * 1.6 + 'px,' + aniScrollX * 2.066 + 'px)';
+			h1Letters[1].style.mozTransform = "translate(" + aniScrollX * 1.6 + 'px,' + aniScrollX * 2.066 + 'px)';
+			h1Letters[2].classList.add('active');
+			h1Letters[2].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX + 'px)';
+			h1Letters[2].style.webkitTransform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX + 'px)';
+			h1Letters[2].style.mozTransform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX + 'px)';
+			h1Letters[3].classList.add('active');
+			h1Letters[3].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 2.5 + 'px)';
+			h1Letters[3].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 2.5 + 'px)';
+			h1Letters[3].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 2.5 + 'px)';
+			h1Letters[4].classList.add('active');
+			h1Letters[4].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.66 + 'px)';
+			h1Letters[4].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.66 + 'px)';
+			h1Letters[4].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.66 + 'px)';
+			h1Letters[5].classList.add('active');
+			h1Letters[5].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.6 + 'px)';
+			h1Letters[5].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.6 + 'px)';
+			h1Letters[5].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.6 + 'px)';
+			h1Letters[6].classList.add('active');
+			h1Letters[6].style.transform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX * -1.24 + 'px)';
+			h1Letters[6].style.webkitTransform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX * -1.24 + 'px)';
+			h1Letters[6].style.mozTransform = "translate(" + aniScrollX * 1.4 + 'px,' + aniScrollX * -1.24 + 'px)';
+			h1Letters[7].classList.add('active');
+			h1Letters[7].style.transform = "translate(" + aniScrollX * -1.57 + 'px,' + aniScrollX * 1.66 + 'px)';
+			h1Letters[7].style.webkitTransform = "translate(" + aniScrollX * -1.57 + 'px,' + aniScrollX * 1.66 + 'px)';
+			h1Letters[7].style.mozTransform = "translate(" + aniScrollX * -1.57 + 'px,' + aniScrollX * 1.66 + 'px)';
+			h1Letters[8].classList.add('active');
+			h1Letters[8].style.transform = "translate(" + aniScrollX * -1.86 + 'px,' + aniScrollX * 1.33 + 'px)';
+			h1Letters[8].style.webkitTransform = "translate(" + aniScrollX * -1.86 + 'px,' + aniScrollX * 1.33 + 'px)';
+			h1Letters[8].style.mozTransform = "translate(" + aniScrollX * -1.86 + 'px,' + aniScrollX * 1.33 + 'px)';
+			h1Letters[9].classList.add('active');
+			h1Letters[9].style.transform = "translate(" + aniScrollX * -2.33 + 'px,' + aniScrollX * -1.66 + 'px)';
+			h1Letters[9].style.webkitTransform = "translate(" + aniScrollX * -2.33 + 'px,' + aniScrollX * -1.66 + 'px)';
+			h1Letters[9].style.mozTransform = "translate(" + aniScrollX * -2.33 + 'px,' + aniScrollX * -1.66 + 'px)';
 
-		h2Letters[0].classList.add('active');
-		h2Letters[0].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.1 + 'px)';
-		h2Letters[1].classList.add('active');
-		h2Letters[1].style.transform = "translate(" + aniScrollX * 1.2 + 'px,' + aniScrollX * 1.18 + 'px)';
-		h2Letters[2].classList.add('active');
-		h2Letters[2].style.transform = "translate(" + aniScrollX * -1.3 + 'px,' + aniScrollX * -1.2+ 'px)';
-		h2Letters[3].classList.add('active');
-		h2Letters[3].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.76 + 'px)';
-		h2Letters[4].classList.add('active');
-		h2Letters[4].style.transform = "translate(" + aniScrollX * 1.3 + 'px,' + aniScrollX * -1.1 + 'px)';
-		h2Letters[5].classList.add('active');
-		h2Letters[5].style.transform = "translate(" + aniScrollX * -1.13 + 'px,' + aniScrollX * -1.56 + 'px)';
+			h1Letters[10].classList.add('active');
+			h1Letters[10].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[10].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[10].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[11].classList.add('active');
+			h1Letters[11].style.transform = "translate(" + aniScrollX * 1.2 + 'px,' + aniScrollX * 1.18 + 'px)';
+			h1Letters[11].style.webkitTransform = "translate(" + aniScrollX * 1.2 + 'px,' + aniScrollX * 1.18 + 'px)'
+			h1Letters[11].style.mozTransform = "translate(" + aniScrollX * 1.2 + 'px,' + aniScrollX * 1.18 + 'px)'
+			h1Letters[12].classList.add('active');
+			h1Letters[12].style.transform = "translate(" + aniScrollX * -1.3 + 'px,' + aniScrollX * -1.2+ 'px)';
+			h1Letters[12].style.webkitTransform = "translate(" + aniScrollX * -1.3 + 'px,' + aniScrollX * -1.2+ 'px)';
+			h1Letters[12].style.mozTransform = "translate(" + aniScrollX * -1.3 + 'px,' + aniScrollX * -1.2+ 'px)';
+			h1Letters[13].classList.add('active');
+			h1Letters[13].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.76 + 'px)';
+			h1Letters[13].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.76 + 'px)';
+			h1Letters[13].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * -1.76 + 'px)';
+			h1Letters[14].classList.add('active');
+			h1Letters[14].style.transform = "translate(" + aniScrollX * 1.3 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[14].style.webkitTransform = "translate(" + aniScrollX * 1.3 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[14].style.mozTransform = "translate(" + aniScrollX * 1.3 + 'px,' + aniScrollX * -1.1 + 'px)';
+			h1Letters[15].classList.add('active');
+			h1Letters[15].style.transform = "translate(" + aniScrollX * -1.13 + 'px,' + aniScrollX * -1.56 + 'px)';
+			h1Letters[15].style.webkitTransform = "translate(" + aniScrollX * -1.13 + 'px,' + aniScrollX * -1.56 + 'px)';
+			h1Letters[15].style.mozTransform = "translate(" + aniScrollX * -1.13 + 'px,' + aniScrollX * -1.56 + 'px)';
 
-		document.querySelector('.top_commet_div').classList.add("active");
-		document.querySelector('.bottom_commet_div').classList.add("active");
-		topCommet.style.transform = "translate(" + aniScrollX * 3 + 'px,' + aniScrollX * -1 + 'px)' + 'rotate(' + aniScrollX * -0.09 + 'deg)';
-		bottomCommet.style.transform = "translate(" + aniScrollX * -3 + 'px,' + aniScrollX * 1 + 'px)' + 'rotate(' + aniScrollX * -0.19 + 'deg)';
+			mobileCommet.classList.add("active");
+			mobileCommet.style.transform = "translate(" + aniScrollX * -0.01 + 'px,' + aniScrollX * 1 + 'px)' + 'rotate(' + 9 + (aniScrollX * 0.015) + 'deg)';
+			mobileCommet.style.webkitTransform = "translate(" + aniScrollX * -0.01 + 'px,' + aniScrollX * 1 + 'px)' + 'rotate(' + 9 + (aniScrollX * 0.015) + 'deg)';
+			mobileCommet.style.mozTransform = "translate(" + aniScrollX * -0.01 + 'px,' + aniScrollX * 1 + 'px)' + 'rotate(' + 9 + (aniScrollX * 0.015) + 'deg)';
+		}
 	}
 	window.onscroll = setInterval(timeout (), 20000)
 }
@@ -379,43 +429,78 @@ function page1H1AnimMobile () {
 		} else {
 			x=90 + (aniScrollX * 0.05)
 		};
-		commet.style.transform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
-		
-		h1Letters[0].classList.add('active');
-		h1Letters[0].style.transform = "translate(" + aniScrollX * 1 + 'px,' + aniScrollX * 1 + 'px)';
-		h1Letters[1].classList.add('active');
-		h1Letters[1].style.transform = "translate(" + aniScrollX * -3.53 + 'px,' + aniScrollX * 1.69 + 'px)';
-		h1Letters[2].classList.add('active');
-		h1Letters[2].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.6 + 'px)';
-		h1Letters[3].classList.add('active');
-		h1Letters[3].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * -3.91 + 'px)';
-		h1Letters[4].classList.add('active');
-		h1Letters[4].style.transform = "translate(" + aniScrollX * -0.45 + 'px,' + aniScrollX * 0.52 + 'px)';
-		h1Letters[5].classList.add('active');
-		h1Letters[5].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -2.17 + 'px)';
-		h1Letters[6].classList.add('active');
-		h1Letters[6].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.17 + 'px)';
-		h1Letters[7].classList.add('active');
-		h1Letters[7].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * 3.91 + 'px)';
-		h1Letters[8].classList.add('active');
-		h1Letters[8].style.transform = "translate(" + aniScrollX * -2 + 'px,' + aniScrollX * -2.17 + 'px)';
-		h1Letters[9].classList.add('active');
-		h1Letters[9].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.3 + 'px)';
-		h1Letters[10].classList.add('active');
-		h1Letters[10].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -1.52 + 'px)';
-		h1Letters[11].classList.add('active');
-		h1Letters[11].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * 2.17 + 'px)';
-		h1Letters[12].classList.add('active');
-		h1Letters[12].style.transform = "translate(" + aniScrollX * 2.66 + 'px,' + aniScrollX * -2.17 + 'px)';
-		h1Letters[13].classList.add('active');
-		h1Letters[13].style.transform = "translate(" + aniScrollX * 2.2 + 'px,' + aniScrollX * -1.74 + 'px)';
-		h1Letters[14].classList.add('active');
-		h1Letters[14].style.transform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
-		h1Letters[15].classList.add('active');
-		h1Letters[15].style.transform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
+		if (aniScrollX <= (1.1 * document.documentElement.clientHeight)) {
+			commet.style.transform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
+			commet.style.webkitTransform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
+			commet.style.mozTransform = "translate(" + aniScrollX * -0.05 + 'px,' + aniScrollX * 1.9 + 'px)' + 'rotate(' + x + 'deg)';
+			
+			h1Letters[0].classList.add('active');
+			h1Letters[0].style.transform = "translate(" + aniScrollX * 1 + 'px,' + aniScrollX * 1 + 'px)';
+			h1Letters[0].style.webkitTransform = "translate(" + aniScrollX * 1 + 'px,' + aniScrollX * 1 + 'px)';
+			h1Letters[0].style.mozTransform = "translate(" + aniScrollX * 1 + 'px,' + aniScrollX * 1 + 'px)';
+			h1Letters[1].classList.add('active');
+			h1Letters[1].style.transform = "translate(" + aniScrollX * -3.53 + 'px,' + aniScrollX * 1.69 + 'px)';
+			h1Letters[1].style.webkitTransform = "translate(" + aniScrollX * -3.53 + 'px,' + aniScrollX * 1.69 + 'px)';
+			h1Letters[1].style.mozTransform = "translate(" + aniScrollX * -3.53 + 'px,' + aniScrollX * 1.69 + 'px)';
+			h1Letters[2].classList.add('active');
+			h1Letters[2].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.6 + 'px)';
+			h1Letters[2].style.webkitTransform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.6 + 'px)';
+			h1Letters[2].style.mozTransform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.6 + 'px)';
+			h1Letters[3].classList.add('active');
+			h1Letters[3].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * -3.91 + 'px)';
+			h1Letters[3].style.webkitTransform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * -3.91 + 'px)';
+			h1Letters[3].style.mozTransform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * -3.91 + 'px)';
+			h1Letters[4].classList.add('active');
+			h1Letters[4].style.transform = "translate(" + aniScrollX * -0.45 + 'px,' + aniScrollX * 0.52 + 'px)';
+			h1Letters[4].style.webkitTransform = "translate(" + aniScrollX * -0.45 + 'px,' + aniScrollX * 0.52 + 'px)';
+			h1Letters[4].style.mozTransform = "translate(" + aniScrollX * -0.45 + 'px,' + aniScrollX * 0.52 + 'px)';
+			h1Letters[5].classList.add('active');
+			h1Letters[5].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[5].style.webkitTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[5].style.mozTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[6].classList.add('active');
+			h1Letters[6].style.transform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[6].style.webkitTransform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[6].style.mozTransform = "translate(" + aniScrollX * 4 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[7].classList.add('active');
+			h1Letters[7].style.transform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * 3.91 + 'px)';
+			h1Letters[7].style.wekitTransform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * 3.91 + 'px)';
+			h1Letters[7].style.mozTransform = "translate(" + aniScrollX * 2 + 'px,' + aniScrollX * 3.91 + 'px)';
+			h1Letters[8].classList.add('active');
+			h1Letters[8].style.transform = "translate(" + aniScrollX * -2 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[8].style.webkitTransform = "translate(" + aniScrollX * -2 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[8].style.mozTransform = "translate(" + aniScrollX * -2 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[9].classList.add('active');
+			h1Letters[9].style.transform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.3 + 'px)';
+			h1Letters[9].style.webkitTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.3 + 'px)';
+			h1Letters[9].style.mozTransform = "translate(" + aniScrollX * -1.33 + 'px,' + aniScrollX * 4.3 + 'px)';
+			h1Letters[10].classList.add('active');
+			h1Letters[10].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -1.52 + 'px)';
+			h1Letters[10].style.webkitTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -1.52 + 'px)';
+			h1Letters[10].style.mozTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * -1.52 + 'px)';
+			h1Letters[11].classList.add('active');
+			h1Letters[11].style.transform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * 2.17 + 'px)';
+			h1Letters[11].style.webkitTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * 2.17 + 'px)';
+			h1Letters[11].style.mozTransform = "translate(" + aniScrollX * 6 + 'px,' + aniScrollX * 2.17 + 'px)';
+			h1Letters[12].classList.add('active');
+			h1Letters[12].style.transform = "translate(" + aniScrollX * 2.66 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[12].style.webkitTransform = "translate(" + aniScrollX * 2.66 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[12].style.mozTransform = "translate(" + aniScrollX * 2.66 + 'px,' + aniScrollX * -2.17 + 'px)';
+			h1Letters[13].classList.add('active');
+			h1Letters[13].style.transform = "translate(" + aniScrollX * 2.2 + 'px,' + aniScrollX * -1.74 + 'px)';
+			h1Letters[13].style.webkitTransform = "translate(" + aniScrollX * 2.2 + 'px,' + aniScrollX * -1.74 + 'px)';
+			h1Letters[13].style.mozTransform = "translate(" + aniScrollX * 2.2 + 'px,' + aniScrollX * -1.74 + 'px)';
+			h1Letters[14].classList.add('active');
+			h1Letters[14].style.transform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
+			h1Letters[14].style.webkitTransform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
+			h1Letters[14].style.mozTransform = "translate(" + aniScrollX * 0.66 + 'px,' + aniScrollX * -1.31 + 'px)';
+			h1Letters[15].classList.add('active');
+			h1Letters[15].style.transform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
+			h1Letters[15].style.webkitTransform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
+			h1Letters[15].style.mozTransform = "translate(" + aniScrollX * -1.06 + 'px,' + aniScrollX * -0.87 + 'px)';
+		}
 	}
-
-	window.onscroll 
+	window.onscroll = setInterval(timeout (), 20000)
 }
 
 if (isMobile.any()) {
