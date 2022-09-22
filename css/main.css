@@ -189,22 +189,32 @@ section {
 }
 
 #a-global-home:hover{
+	text-decoration: underline;
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
 #a-global-gallery:hover{
+	text-decoration: underline;
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
 #a-global-about:hover{
+	text-decoration: underline;
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
 #a-global-lang:hover{
+	text-decoration: underline;
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
 #a-global-contacts2:hover{
+	text-decoration: underline;
+	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
+}
+
+#a-global-contacts:hover{
+	text-decoration: underline;
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 }
 
@@ -2487,7 +2497,7 @@ align-items: center;
 .footer-menu ul {
 	text-align: left;
 	font-family: Crimson Text;
-	font-size: 2.8em;
+	font-size: 2.4em;
 	letter-spacing: -0.05em;
 	color: #fff;
 	padding-left: 20px;
