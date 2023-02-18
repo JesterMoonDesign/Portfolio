@@ -1340,7 +1340,7 @@ section {
 	animation: shadow_opacity 0.5s ease-in-out 0.6s;
 	-webkit-animation: shadow_opacity 0.5s ease-in-out 0.6s;
 	-moz-animation: shadow_opacity 0.5s ease-in-out 0.6s;
-	border: 1px solid rgba(240, 187, 77, 1);
+	border: 3px solid black;
 	/* box-shadow: -10px -10px 20px 1px rgb(0,0,0, 0.1);
 	-webkit-box-shadow: -10px -10px 20px 1px rgb(0,0,0, 0.1);
 	-moz-box-shadow: -10px -10px 20px 1px rgb(0,0,0, 0.1);
@@ -1579,7 +1579,7 @@ section {
 	background: gray;
 	width: 50%;
 	overflow: hidden;
-	border:  1px solid rgba(33, 209, 239, 1);
+	border:  3px solid black;
 }
 
 @media screen and (max-width: 1200px) {
