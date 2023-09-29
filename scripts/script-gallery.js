@@ -121,6 +121,7 @@ function galleryModal () {
 		} else {
 			modalLinkWrapper.style.display = 'flex';
 			modalLink.innerHTML = link;
+			modalLink.href = link;
 		}
 
 		function moveModal (event) {
