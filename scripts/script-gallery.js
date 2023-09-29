@@ -134,7 +134,7 @@ function galleryModal () {
 
 		modalImg.onload = function() {
 			imageHeight = modalImg.height;
-			query.matches ? imageBg.style.height = imageHeight + 600 + 'px' : imageBg.style.height = body.offsetHeight + 200 + 'px';
+			query.matches ? imageBg.style.height = imageHeight + 800 + 'px' : imageBg.style.height = body.offsetHeight + 200 + 'px';
 			x = e.pageY - e.clientY;
 
 			window.addEventListener('scroll', moveModal);
