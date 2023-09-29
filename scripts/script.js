@@ -221,12 +221,12 @@ function sliderBeeforeAfterMobile () {
 		galleryResize.style.clip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		galleryResize.style.webkitClip = "rect(auto," + (x + 20) + "px,auto,auto)";
 		galleryResize.style.mozClip = "rect(auto," + (x + 20) + "px,auto,auto)";
-		}
+		};
 		scrollLoc();
 		document.body.addEventListener('touchmove', onDrag);
 		function pointerLose() {
 		document.body.removeEventListener('touchmove', onDrag);
-		galleryAdaptive ();
+		galleryAdaptive();
 		scrollUnlock();
 		}
 		document.body.addEventListener('touchend', pointerLose);
