@@ -3296,11 +3296,17 @@ text-align: right;
 	margin-top: -4%;
 	padding-bottom: 5.72916666667%;
 }
+
 .gallery-items-flex-block.not-full .image__wraper.image-4 {
 	margin-top: 0;
 	padding-bottom: 9%;
 }
 
+@media screen and (max-width: 500px) {
+	.gallery-items-flex-block.not-full .image__wraper.image-4 {
+		margin-top: 3%;
+	}
+}
 
 .gallery-items-flex-block.not-full .first-container {
 	margin-left: 4%;
@@ -3597,8 +3603,7 @@ object-fit: cover;
 	margin-top: -30%;
 	z-index: -1;
 	width: 100vw;
-	height: 350vh;
-	min-height: 130vh;
+	height: 210vh;
 	background: rgba(0, 0, 0, 0.6);
 	cursor: pointer;
 }

@@ -78,7 +78,7 @@ function scrollUnlock() {
 // 	});
 // }
 
-const query = window.matchMedia('(min-width: 768px)');
+const query = window.matchMedia('(min-width: 500px)');
 const imagesWrapers = document.querySelectorAll('.image__wraper');
 
 function galleryModal () {
@@ -114,6 +114,14 @@ function galleryModal () {
 		const description = image.dataset.description;
 		const link = image.dataset.link;
 
+		imageBg.style.transition = 'none';
+		imageBg.style.WebkitTransition = 'none';
+		imageBg.style.MozTransition = 'none';
+		imageBg.style.oTransition = 'none';
+		imageBg.style.transform = 'translate(-50%, 0px)';
+		document.body.scrollTop = 0;
+  		document.documentElement.scrollTop = 0;
+
 		modalImg.src = image.src;
 		!description ? modalDescription.innerHTML = '' : modalDescription.innerHTML = description;
 		if (!link) {
@@ -124,43 +132,27 @@ function galleryModal () {
 			modalLink.href = link;
 		}
 
-		function moveModal (event) {
-			x = event.target.scrollingElement.scrollTop;
+		modalImg.onload = function() {
+			imageHeight = modalImg.height;
+			query.matches ? imageBg.style.height = imageHeight + 200 + 'px' : imageBg.style.height = body.offsetHeight + 200 + 'px';
+			x = e.pageY - e.clientY;
 
-			if (query.matches) {
-				if (x <= imageHeight - (bodyHeight - 200)) { //!!!!!
-					imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-					imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
-					imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)'
-				} else {};
-			} else {
-					if (x <= (bodyHeight - x - 100)) { //!!!!!
-						imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-						imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
-						imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)';
-					}
-			}
+			window.addEventListener('scroll', moveModal);
 		};
 
-		modalImg.onload = function() {
-		imageHeight = modalImg.height;
-		if (!query.matches) {
-			x = e.pageY - e.clientY;
-			imageBg.style.transform = 'translate(-50%,' + x + 'px)';
-			imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
-			imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)';
-		}
-		imageBg.style.transition = 'none';
-		imageBg.style.WebkitTransition = 'none';
-		imageBg.style.MozTransition = 'none';
-		imageBg.style.oTransition = 'none';
-
+		function moveModal (event) {
+			x = event.target.scrollingElement.scrollTop;
+			let y;
 			if (query.matches) {
-				if (imageHeight > (bodyHeight -200)) { //!!!!!
-				window.addEventListener('scroll', moveModal);
-				};
+				y = 1000;
 			} else {
-				window.addEventListener('scroll', moveModal);
+				y = bodyHeight
+			}
+
+			if (x <= bodyHeight-y) { //!!!!!
+				imageBg.style.transform = 'translate(-50%,' + x + 'px)';
+				imageBg.style.webkitTransform = 'translate(-50%,' + x + 'px)';
+				imageBg.style.mozTransform = 'translate(-50%,' + x + 'px)';
 			}
 		};
 
