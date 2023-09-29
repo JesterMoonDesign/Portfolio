@@ -3982,6 +3982,7 @@ object-fit: cover;
 	filter: grayscale(80%);
 	-webkit-filter: contrast(120%) drop-shadow(-1px 1px 1px grey);
 	-moz-filter: contrast(120%) drop-shadow(-1px 1px 1px grey);
+	z-index: 20;
 }
 
 .about-contacts-link {
