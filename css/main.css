@@ -392,6 +392,14 @@ section {
 	-webkit-filter: drop-shadow(0 0 10px rgba(41,203,240,1));
 }
 
+@media screen and (max-width: 500px) {
+	.arrow-to-up {
+		width: 30px;
+		bottom: 0;
+		right: 5%;
+	}
+}
+
 .main-page-section-1 {
 	padding-top: 2%;
 	background: #000;
@@ -2289,6 +2297,12 @@ align-items: center;
 	color: #000;
 }
 
+@media screen and (max-width: 820px) {
+	.contacts h3 {
+		margin-top: 10%;
+	}
+}
+
 .contacts-wraper .email {
 	display: none;
 }
@@ -3181,6 +3195,12 @@ text-align: right;
 	width: 80px;
 }
 
+@media screen and (max-width: 500px) {
+	.inner-pages-logo-black {
+		width: 50px;
+	}
+}
+
 .gallery-nav {
 	width: 86.4583333333%;
 	margin: 3% auto;
@@ -3188,6 +3208,12 @@ text-align: right;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+	.gallery-nav {
+		margin: 3% auto 5% auto;
+	}
 }
 
 .gallery-nav a {
@@ -3295,6 +3321,13 @@ text-align: right;
 	.gallery-h1 {
 		font-size: 4em;
 		margin-left: 1.5%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.gallery-h1 {
+		margin-left: 1.5%;
+		margin-top: 7%;
 	}
 }
 
@@ -3800,6 +3833,14 @@ object-fit: cover;
 	}
 }
 
+
+@media screen and (max-width: 500px) {
+	.about-h1 {
+		margin-left: 1.5%;
+		margin-top: 7%;
+	}
+}
+
 .about-text {
 	position: relative;
 	z-index: 4;
@@ -3817,14 +3858,14 @@ object-fit: cover;
 }
 
 .file-storage-title {
-	font-size: 2em;
+	font-size: calc(17px + 4 * ((100vw - 320px) / (1920 - 320)));
 	margin: 0 auto;
 	text-align: center;
 }
 
 .files_storage {
 	background: #f3f3f3;
-	margin:  0 auto;
+	margin:  2% auto 0 auto;
 	padding: 2%;
 	width: 40%;
 	display: flex;
@@ -4041,15 +4082,24 @@ object-fit: cover;
 
 @media screen and (max-width: 1400px) {
 	.files_storage {
-		width: 65%;
+		width: 75%;
 		padding: 0 0 4% 0;
 	}
 	.file {
-	width: 10%;
+	width: 15%;
 	margin: 8%;
 	}
-	.resume__eng:after,.resume__ru:after,.resume__ukr:after,.recomendation:after{
-	font-size: 2.7em;
+	.resume__eng:after,
+	.resume__ru:after,
+	.resume__ukr:after,
+	.recomendation:after,
+	.codecademy-js-certificate:after,
+	.codecademy-js-intermediate-certificate:after,
+	.codecademy-vue-certificate:after,
+	.codecademy-js-intermediate-certificate:after,
+	.codecademy-vue-certificate:after,
+	.codecademy-unit-test-certificate:after {
+		font-size: 2.7em;
 	}
 }
 
@@ -4058,7 +4108,7 @@ object-fit: cover;
 	width: 80%;
 	}
 	.files_storage {
-	margin:  0 auto;
+	margin:  2% auto 0 auto;
 	padding: 7% 5% 17% 5%;
 	width: 80%;
 	display: flex;
@@ -4075,8 +4125,17 @@ object-fit: cover;
 	.resume__eng {
 	margin: 0 7% 0 7%;
 	}
-	.resume__eng:after,.resume__ru:after,.resume__ukr:after,.recomendation:after{
-	font-size: 3.5em;
+	.resume__eng:after,
+	.resume__ru:after,
+	.resume__ukr:after,
+	.recomendation:after,
+	.codecademy-js-certificate:after,
+	.codecademy-js-intermediate-certificate:after,
+	.codecademy-vue-certificate:after,
+	.codecademy-js-intermediate-certificate:after,
+	.codecademy-vue-certificate:after,
+	.codecademy-unit-test-certificate:after {
+		font-size: 3.5em;
 	}
 	.about-contacts-link {
 	margin: 10% auto 0 auto;
@@ -4118,6 +4177,22 @@ object-fit: cover;
 	margin-top: 15.625%;
 	margin-left: -8.33333333333%;
 	width: 26.042vw;
+}
+
+@media screen and (max-width: 500px) {
+	#about-graphics-elipse-100px {
+		margin-left: 93.5416666667%;
+	}
+	#about-graphics-elipse-200px {
+		margin-left: 95.2916666667%;
+	}
+	#about-graphics-elipse-330px {
+		margin-top: 32.041667%;
+    	margin-left: 92.5%;
+	}
+	#about-graphics-elipse-500px {
+		margin-left: -17.333333%;
+	}
 }
 
 /*										Страница 404										*/
