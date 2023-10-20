@@ -311,7 +311,7 @@ section {
 .header {
 	background: #000;
 	width: 100%;
-	padding-top: 6vh;
+	padding-top: 40px;
 }
 
 .nav {
@@ -401,8 +401,7 @@ section {
 }
 
 .main-page-section-1 {
-	padding-top: 2vh;
-	height: 94vh;
+	padding-top: 2%;
 	background: #000;
 	overflow: -moz-hidden-unscrollable;
 }
@@ -2512,7 +2511,7 @@ align-items: center;
 	position: relative;
 	z-index: 90;
 	width: 100%;
-	margin-top: -28%;
+	margin-top: -21%;
 }
 
 .footer-menu {
@@ -2832,7 +2831,7 @@ margin: 0 0 3.73333333333% 0;
 text-align: right;
 }
 
-.mobile-header_.3 {
+.mobile-header.elem3 {
 	font-size: 16vw;
 }
 
