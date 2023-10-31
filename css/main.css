@@ -1039,10 +1039,28 @@ section {
 
 .page-2-text-block h2 {
 	padding: 15px;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-family: Crimson Text;
 	color: #fff;
 	margin-top: 4.16666666667%;
+}
+
+.who-i-am-text-link {
+	font-size: 1em!important;
+    font-family: Crimson Text regular!important;
+    padding: 0 2px 0 0!important;
+	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%)!important;
+	background-clip: text!important;
+	-webkit-background-clip: text!important;
+	-webkit-text-fill-color: transparent!important;
+	opacity: 1!important;
+}
+
+.who-i-am-text-link:hover {
+	background-clip: unset!important;
+	-webkit-background-clip: unset!important;
+	-webkit-text-fill-color: unset!important;
+	color: #fff;
 }
 
 @media (max-width: 769px) {
@@ -1057,7 +1075,7 @@ section {
 	margin-top: 2%;
 	color: #fff;
 	letter-spacing: -0.05em;
-	font-size: 2.5em;
+	font-size: 2.2em;
 	padding: 0 15px;
 }
 
@@ -2418,6 +2436,11 @@ align-items: center;
 	margin: 0 0 0 0;
 	cursor: pointer;
 }
+.sm-behance {
+	width: 4.5%;
+	margin: 4% 0 0 1%;
+	cursor: pointer;
+}
 @media (max-width: 650px) {
 	.sm-facebook {
 	width: 8%;
@@ -2431,6 +2454,11 @@ align-items: center;
 	.sm-linkedin {
 	width: 8.89583333333%;
 	margin: 0 0 0 0;
+	}
+	.sm-behance {
+		width: 8%;
+		margin: 4% 0 0 2%;
+		cursor: pointer;
 	}
 	.contacts-wraper.active .email {
 	flex-direction: column;
