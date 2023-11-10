@@ -417,7 +417,7 @@ function page1H1AnimMobile () {
 		pageAnimation_Mobile ();
 	}
 
-	let h1Letters = document.querySelectorAll('.mobile-header_ span');
+	let h1Letters = document.querySelectorAll('.mobile-header span');
 	let commet = document.querySelector('.mobile_main_page_graphic_img');
 	let aniScrollX = 0;
 

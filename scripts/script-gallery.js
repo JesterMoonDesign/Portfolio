@@ -105,7 +105,6 @@ function galleryModal () {
 	function openModal (e) {
 
 		const body = document.querySelector('.gallery__body');
-		const imageContainer = document.querySelector('.image');
 		const bodyHeight = body.clientHeight;
 		let imageHeight = 0;
 		let x = 0;
@@ -122,7 +121,7 @@ function galleryModal () {
 		document.body.scrollTop = 0;
   		document.documentElement.scrollTop = 0;
 
-		modalImg.src = image.src;
+		modalImg.src = image.dataset.fullscreensrc || image.src;
 		!description ? modalDescription.innerHTML = '' : modalDescription.innerHTML = description;
 		if (!link) {
 			modalLinkWrapper.style.display = 'none';
