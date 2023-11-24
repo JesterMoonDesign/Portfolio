@@ -1095,8 +1095,8 @@ section {
 }
 
 @media screen and (max-width: 769px) {
-	.page-2-text-block a {
-	margin-left: 28%;
+	#more-about-me-link {
+	margin-left: 40%;
 	}
 }
 
@@ -3698,6 +3698,7 @@ object-fit: cover;
 	margin-top: -30%;
 	z-index: -1;
 	width: 100vw;
+	min-height: 100vh;
 	height: 210vh;
 	background: rgba(0, 0, 0, 0.6);
 	cursor: pointer;
@@ -4133,7 +4134,8 @@ object-fit: cover;
 	.codecademy-vue-certificate:after,
 	.codecademy-js-intermediate-certificate:after,
 	.codecademy-vue-certificate:after,
-	.codecademy-unit-test-certificate:after {
+	.codecademy-unit-test-certificate:after,
+	.resume__ua:after {
 		font-size: 2.7em;
 	}
 }
