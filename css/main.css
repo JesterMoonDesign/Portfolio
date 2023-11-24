@@ -1045,7 +1045,7 @@ section {
 	margin-top: 4.16666666667%;
 }
 
-.who-i-am-text-link,.link-wrapper {
+.who-i-am-text-link {
 	font-size: 1em!important;
     font-family: Crimson Text regular!important;
     padding: 0 2px 0 0!important;
@@ -3731,10 +3731,13 @@ object-fit: cover;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+	padding: 0 2px 0 0!important;
+}
+
+.modal-link {
 	font-size: 1.5em!important;
 	font-family: Crimson Text regular!important;
-	padding: 0 2px 0 0!important;
-	background: linear-gradient(90deg, rgba(233,189,0,0.8) 45%, rgba(250,159,246,0.8) 46%, rgba(206,147,255,0.8) 50%, rgba(41,203,240,0.8) 60%)!important;
+	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%)!important;
 	background-clip: text!important;
 	-webkit-background-clip: text!important;
 	-webkit-text-fill-color: transparent!important;
@@ -3750,6 +3753,14 @@ object-fit: cover;
 .modal-description a:hover {
 	background: linear-gradient(90deg, rgba(233,189,0,0.8) 0%, rgba(250,159,222,0.8) 32%, rgba(206,147,255,0.8) 62%, rgba(41,203,240,0.8) 100%);
 	color: #fff;
+}
+
+.modal-link:hover {
+	background-clip: unset!important;
+	-webkit-background-clip: unset!important;
+	-webkit-text-fill-color: unset!important;
+	color: #fff;
+	text-decoration: underline;
 }
 
 @media (max-width: 768px) {
