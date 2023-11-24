@@ -1045,7 +1045,7 @@ section {
 	margin-top: 4.16666666667%;
 }
 
-.who-i-am-text-link {
+.who-i-am-text-link,.link-wrapper {
 	font-size: 1em!important;
     font-family: Crimson Text regular!important;
     padding: 0 2px 0 0!important;
@@ -3731,7 +3731,14 @@ object-fit: cover;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
+	font-size: 1.5em!important;
+	font-family: Crimson Text regular!important;
+	padding: 0 2px 0 0!important;
+	background: linear-gradient(90deg, rgba(233,189,0,0.8) 45%, rgba(250,159,246,0.8) 46%, rgba(206,147,255,0.8) 50%, rgba(41,203,240,0.8) 60%)!important;
+	background-clip: text!important;
+	-webkit-background-clip: text!important;
+	-webkit-text-fill-color: transparent!important;
+	opacity: 1!important;
 }
 
 .modal-description a {
